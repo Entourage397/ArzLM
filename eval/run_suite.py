@@ -229,6 +229,7 @@ def main() -> int:
 
     include = Path(__file__).resolve().parent
     sys.path.insert(0, str(include))
+    import lm_eval.models  # noqa: F401  # registers hf and other stock backends
     import arzlm_lm  # noqa: F401  # registers lm-eval --model arzlm
 
     for spec in MODELS:
@@ -242,8 +243,7 @@ def main() -> int:
                 model_args = (
                     f"checkpoint={args.arzlm_checkpoint},"
                     f"dtype={settings.get('dtype','bf16')},"
-                    f"max_length={settings['max_length']},"
-                    f"batch_size={settings.get('batch_size', 1)}"
+                    f"max_length={settings['max_length']}"
                 )
                 rec["lm_eval"] = run_lm_eval(
                     model_kind="arzlm",
