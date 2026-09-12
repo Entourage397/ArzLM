@@ -32,6 +32,7 @@ dev = [
 eval = [
     "lm-eval==0.4.13",
     "transformers>=4.51",
+    "accelerate>=1.0",
 ]
 
 [project.scripts]
