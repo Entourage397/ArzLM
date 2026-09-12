@@ -136,9 +136,6 @@ def run_lm_eval(
     t0 = time.perf_counter()
     for task in tasks:
         num_fewshot = fewshot.get(task)
-        extra: dict[str, Any] = {}
-        if include_path is not None:
-            extra["include_path"] = str(include_path)
         kwargs = dict(
             model=model_kind,
             model_args=model_args,
@@ -149,8 +146,12 @@ def run_lm_eval(
             random_seed=settings["seed"],
             numpy_random_seed=settings["seed"],
             torch_random_seed=settings["seed"],
+            fewshot_random_seed=settings["seed"],
             apply_chat_template=False,
+            fewshot_as_multiturn=False,
             confirm_run_unsafe_code=False,
+            log_samples=False,
+            bootstrap_iters=1000,
         )
         if limit is not None:
             kwargs["limit"] = limit

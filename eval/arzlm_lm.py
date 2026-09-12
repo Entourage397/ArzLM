@@ -89,48 +89,85 @@ def _register():
                 raise RuntimeError("non-finite logits in ArzLMLM")
             return logits
 
-        def _loglikelihood_one(self, context: str, continuation: str) -> tuple[float, bool]:
+        def _prepare_ll(self, context: str, continuation: str) -> tuple[list[int], list[int], list[int]] | None:
             ctx_ids = self.tok_encode(context) if context else [self.eot_token_id]
             cont_ids = self.tok_encode(continuation)
             if not cont_ids:
-                return 0.0, True
+                return None
             seq = ctx_ids + cont_ids
             if len(seq) > self.max_length:
                 overflow = len(seq) - self.max_length
                 if overflow >= len(ctx_ids):
-                    keep_ctx = 1
                     seq = seq[-(self.max_length) :]
-                    ctx_ids = seq[:keep_ctx]
-                    cont_ids = seq[keep_ctx:]
+                    ctx_ids = seq[:1]
+                    cont_ids = seq[1:]
                 else:
                     ctx_ids = ctx_ids[overflow:]
                     seq = ctx_ids + cont_ids
+            return ctx_ids, cont_ids, seq
+
+        def _score_row(
+            self,
+            logprobs: torch.Tensor,
+            greedy: torch.Tensor,
+            target: torch.Tensor,
+            ctx_len: int,
+            cont_len: int,
+        ) -> tuple[float, bool]:
+            start = ctx_len - 1
+            end = start + cont_len
+            slice_tgt = target[start:end]
+            slice_log = logprobs[start:end]
+            slice_greedy = greedy[start:end]
+            if slice_tgt.numel() != cont_len:
+                raise RuntimeError(
+                    f"continuation align error: scored {slice_tgt.numel()} vs {cont_len}"
+                )
+            gathered = slice_log.gather(-1, slice_tgt.unsqueeze(-1)).squeeze(-1)
+            ll = float(gathered.sum().item())
+            if not math.isfinite(ll):
+                raise RuntimeError("non-finite loglikelihood")
+            return ll, bool(torch.equal(slice_greedy, slice_tgt))
+
+        def _loglikelihood_one(self, context: str, continuation: str) -> tuple[float, bool]:
+            prepared = self._prepare_ll(context, continuation)
+            if prepared is None:
+                return 0.0, True
+            ctx_ids, cont_ids, seq = prepared
             inp = torch.tensor(seq, dtype=torch.long, device=self.device).unsqueeze(0)
             logits = self._forward_logits(inp)[0, :-1]
             target = inp[0, 1:]
             logprobs = F.log_softmax(logits.float(), dim=-1)
             greedy = logits.argmax(dim=-1)
-            start = len(ctx_ids) - 1
-            end = start + len(cont_ids)
-            slice_log = logprobs[start:end]
-            slice_tgt = target[start:end]
-            slice_greedy = greedy[start:end]
-            if slice_tgt.numel() != len(cont_ids):
-                raise RuntimeError(
-                    f"continuation align error: scored {slice_tgt.numel()} vs {len(cont_ids)}"
-                )
-            gathered = slice_log.gather(-1, slice_tgt.unsqueeze(-1)).squeeze(-1)
-            ll = float(gathered.sum().item())
-            is_greedy = bool(torch.equal(slice_greedy, slice_tgt))
-            if not math.isfinite(ll):
-                raise RuntimeError("non-finite loglikelihood")
-            return ll, is_greedy
+            return self._score_row(logprobs, greedy, target, len(ctx_ids), len(cont_ids))
 
         def loglikelihood(self, requests):
-            out = []
-            for req in requests:
+            out: list[tuple[float, bool] | None] = [None] * len(requests)
+            pending: list[tuple[int, list[int], list[int], list[int]]] = []
+            for i, req in enumerate(requests):
                 context, continuation = req.args
-                out.append(self._loglikelihood_one(context, continuation))
+                prepared = self._prepare_ll(context, continuation)
+                if prepared is None:
+                    out[i] = (0.0, True)
+                    continue
+                ctx_ids, cont_ids, seq = prepared
+                pending.append((i, ctx_ids, cont_ids, seq))
+            bs = max(1, self._batch_size)
+            pad_id = int(getattr(self.loaded.tokenizer, "pad_id", None) or 3)
+            for start in range(0, len(pending), bs):
+                chunk = pending[start : start + bs]
+                max_t = max(len(seq) for _, _, _, seq in chunk)
+                batch = torch.full((len(chunk), max_t), pad_id, dtype=torch.long, device=self.device)
+                for row, (_, _, _, seq) in enumerate(chunk):
+                    batch[row, : len(seq)] = torch.tensor(seq, dtype=torch.long, device=self.device)
+                logits = self._forward_logits(batch)[:, :-1]
+                logprobs = F.log_softmax(logits.float(), dim=-1)
+                greedy = logits.argmax(dim=-1)
+                target = batch[:, 1:]
+                for row, (orig_i, ctx_ids, cont_ids, _seq) in enumerate(chunk):
+                    out[orig_i] = self._score_row(
+                        logprobs[row], greedy[row], target[row], len(ctx_ids), len(cont_ids)
+                    )
             return out
 
         def loglikelihood_rolling(self, requests):
