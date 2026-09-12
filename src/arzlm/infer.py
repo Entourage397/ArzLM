@@ -49,9 +49,31 @@ class LoadedModel:
     source: str
 
 
+def _looks_like_hub_id(path: str | Path) -> bool:
+    text = str(path).strip()
+    if not text or text.startswith(".") or Path(text).exists():
+        return False
+    return "/" in text and "\\" not in text and not text.startswith("/")
+
+
+def maybe_download_hub(path: str | Path) -> Path:
+    """Return a local directory. Hub ids like `Kymaris/ArzLM-300M-Base` are snapshotted."""
+    raw = str(path).strip()
+    if _looks_like_hub_id(raw):
+        repo_id = raw
+        if repo_id.endswith("/litgpt"):
+            repo_id = repo_id[: -len("/litgpt")]
+        from huggingface_hub import snapshot_download
+
+        local = snapshot_download(repo_id=repo_id, repo_type="model")
+        return Path(local)
+    return Path(path).expanduser()
+
+
 def resolve_checkpoint_dir(path: str | Path) -> Path:
-    """Accept a release root, `litgpt/` subdir, or a directory that contains `lit_model.pth`."""
-    root = Path(path).expanduser().resolve()
+    """Accept a Hub id, release root, `litgpt/` subdir, or a directory with weights."""
+    root = maybe_download_hub(path)
+    root = root.expanduser().resolve()
     if root.is_file():
         root = root.parent
     candidates = [
@@ -204,6 +226,7 @@ __all__ = [
     "checkpoint_model_state",
     "decode_token_ids",
     "encode_prompt_batch",
+    "maybe_download_hub",
     "generate",
     "load_inference_checkpoint",
     "resolve_checkpoint_dir",

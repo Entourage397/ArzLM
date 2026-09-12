@@ -1,4 +1,7 @@
+.venv
 .venv/
+.venv-gcc/
+.venv-clang-broken/
 .python-version
 __pycache__/
 *.py[cod]
