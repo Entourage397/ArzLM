@@ -1,0 +1,41 @@
+ArzLM
+Copyright 2026 ArzLM contributors
+
+This product includes original training, data-preparation, and inference
+code distributed under the Apache License, Version 2.0 (see LICENSE).
+
+Third-party software
+--------------------
+
+Muon (single-device Newton–Schulz optimizer), vendored from
+https://github.com/KellerJordan/Muon (retrieved 2026-09-08).
+Copyright (c) 2024 Keller Jordan. MIT License. The MIT notice is
+reproduced in src/arzlm/training/optim/muon.py comments; the original
+LICENSE is MIT.
+
+LitGPT 0.5.13, Lightning/PyTorch, Hugging Face tokenizers, and other
+Python dependencies remain under their upstream licenses (Apache-2.0,
+BSD, or as declared on PyPI).
+
+Training-data attribution (ODC-By / original licenses)
+------------------------------------------------------
+
+ArzLM-300M-Base was pretrained on packed text from:
+
+* HuggingFaceFW/fineweb-edu (config sample-10BT) — ODC-By-1.0;
+  crawled pages remain subject to the Common Crawl Terms of Use.
+* HuggingFaceTB/finemath (config finemath-4plus) — ODC-By-1.0;
+  crawled pages remain subject to the Common Crawl Terms of Use.
+* HuggingFaceTB/smollm-corpus cosmopedia-v2 — dataset card license ODC-By;
+  Cosmopedia-v2 is Mixtral-generated textbooks seeded from web pages.
+* HuggingFaceTB/stack-edu — Software Heritage blobs under the original
+  FOSS licenses of each file. This run kept the permissive-license subset
+  recorded in data/security/source-lock-6b.json.
+* allenai/peS2o v2 — ODC-By (corpus). Paper copyrights remain with authors.
+
+ODC-By requires attribution of the database. This NOTICE is that
+attribution. Model weights are a trained artifact, not a redistribution
+of the raw corpora.
+
+Nemotron-CC-Math was considered and rejected because the NVIDIA Data
+Agreement does not permit this release model.

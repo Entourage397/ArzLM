@@ -1,0 +1,174 @@
+{
+  "environment": {
+    "python": "3.12.14",
+    "platform": "linux",
+    "pytorch": "2.11.0+cu128",
+    "cuda_runtime": "12.8",
+    "cuda_available": true,
+    "bf16_supported": true,
+    "triton": true,
+    "triton_version": "3.6.0",
+    "sdpa": {
+      "flash_sdp": true,
+      "mem_efficient_sdp": true,
+      "math_sdp": true,
+      "cudnn_sdp": true,
+      "sdp_backends": []
+    },
+    "preferred_sdpa": "flash",
+    "compile_notes": {
+      "platform": "linux",
+      "triton_available": true,
+      "triton_version": "3.6.0",
+      "recommendation": "native compile stack looks usable"
+    },
+    "nvidia_driver": "616.64",
+    "nvidia_cuda_version": null,
+    "gpu_name": "NVIDIA GeForce RTX 4070 Laptop GPU",
+    "gpu_capability": [
+      8,
+      9
+    ],
+    "gpu_total_memory_bytes": 8585216000,
+    "cuda_version": "12.8",
+    "litgpt": "0.5.13",
+    "lightning": "2.6.5"
+  },
+  "parameters": {
+    "trainable": 100094208,
+    "total": 100094208,
+    "formula": 100094208,
+    "target": 100000000
+  },
+  "compile_active": true,
+  "compile_error": null,
+  "loss": 4.4253106117248535,
+  "best_train_loss": 3.670076847076416,
+  "val_loss": 4.3474273681640625,
+  "val_ppl": 77.27939553828132,
+  "steps": 6103,
+  "iters": 12207,
+  "tokens": 49999872,
+  "elapsed_s": 1873.506065236,
+  "tokens_per_sec": 26687.86236019026,
+  "finite": true,
+  "out_dir": "/home/asus/arzlm/runs/adamw-50m",
+  "sdpa": "flash",
+  "precision": "bf16-true",
+  "micro_batch_size": 4,
+  "global_batch_size": 8,
+  "gradient_accumulation": 2,
+  "seq_length": 1024,
+  "seed": 42,
+  "git_commit": "94461cdf9ebd22fec704a5f93e93f6fca151cbc7",
+  "git_describe": "baseline-v0-3-g94461cd-dirty",
+  "optimizer": {
+    "kind": "adamw",
+    "class": "AdamW",
+    "spec": {
+      "name": "adamw",
+      "class_path": "torch.optim.AdamW",
+      "init_args": {
+        "lr": 0.0006,
+        "weight_decay": 0.1,
+        "betas": [
+          0.9,
+          0.95
+        ],
+        "eps": 1e-08,
+        "fused": true
+      }
+    },
+    "param_groups": [
+      {
+        "lr": 0.0006,
+        "betas": [
+          0.9,
+          0.95
+        ],
+        "eps": 1e-08,
+        "weight_decay": 0.1,
+        "amsgrad": false,
+        "maximize": false,
+        "foreach": null,
+        "capturable": false,
+        "differentiable": false,
+        "fused": true,
+        "decoupled_weight_decay": true,
+        "initial_lr": 0.0006,
+        "n_params": 100094208,
+        "n_tensors": 110
+      }
+    ]
+  },
+  "lr_schedule": "linear_warmup_cosine",
+  "flop_estimate_6nd": 30028185527648256,
+  "metrics_path": "/home/asus/arzlm/runs/adamw-50m/metrics.jsonl",
+  "max_grad_norm": 584.0,
+  "last_grad_norm": 0.546875,
+  "loss_spike_count": 0,
+  "qk_health": {
+    "qkv_rms": {
+      "mean": 0.029910435434430838,
+      "max": 0.030618973076343536,
+      "min": 0.02884620986878872
+    },
+    "norm_q_rms": {
+      "mean": 1.0,
+      "max": 1.0,
+      "min": 1.0
+    },
+    "norm_k_rms": {
+      "mean": 1.0,
+      "max": 1.0,
+      "min": 1.0
+    },
+    "qkv_max_abs": 0.12890625
+  },
+  "dynamo": {
+    "counters": {
+      "frames": {
+        "total": 2,
+        "ok": 2
+      },
+      "stats": {
+        "calls_captured": 2096,
+        "unique_graphs": 2
+      },
+      "inductor": {
+        "pattern_matcher_count": 825,
+        "pattern_matcher_nodes": 923,
+        "fxgraph_cache_miss": 3,
+        "extern_calls": 376,
+        "async_compile_cache_miss": 46,
+        "triton_bundler_save_kernel": 696,
+        "triton_bundler_save_static_autotuner": 3,
+        "benchmarking.InductorBenchmarker.benchmark": 61,
+        "benchmarking.InductorBenchmarker.benchmark_gpu": 61
+      },
+      "aot_autograd": {
+        "total": 2,
+        "autograd_cache_miss": 2,
+        "ok": 2,
+        "autograd_cache_saved": 2
+      },
+      "graph_break": {},
+      "aten_mm_info": {
+        "aten.mm_4096_1280_768": 24,
+        "aten.mm_4096_768_768": 36,
+        "aten.mm_4096_2048_768": 60,
+        "aten.mm_4096_768_2048": 48,
+        "aten.mm_4096_32000_768": 2,
+        "aten.mm_4096_768_32000": 1,
+        "aten.mm_768_2048_4096": 12,
+        "aten.mm_2048_768_4096": 24,
+        "aten.mm_768_768_4096": 12,
+        "aten.mm_1280_768_4096": 12,
+        "aten.mm_4096_768_1280": 12,
+        "aten.addmm_32000_768_4096": 1
+      }
+    }
+  },
+  "peak_allocated_vram_bytes": 3790729216,
+  "peak_reserved_vram_bytes": 4336910336
+}

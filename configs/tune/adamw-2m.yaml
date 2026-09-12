@@ -1,0 +1,41 @@
+# Short AdamW control for the optimizer sweep. Same architecture/data/seed as
+# the Muon trials. Token budget 2M (well under the 10M-per-trial cap).
+name: tune-adamw-2m
+model_config: ../model-arzlm-100m.yaml
+out_dir: runs/tune/adamw-2m
+data_dir: data/prepared/10m
+tokenizer_dir: tokenizer/trained
+precision: bf16-true
+compile: false
+seed: 42
+devices: 1
+logger_name: csv
+resume: false
+num_workers: 0
+
+train:
+  save_interval: 100000
+  log_interval: 10
+  global_batch_size: 8
+  micro_batch_size: 2
+  lr_warmup_steps: 50
+  max_tokens: 2000000
+  max_seq_length: 1024
+  tie_embeddings: true
+  max_norm: 1.0
+  min_lr: 6.0e-5
+
+eval:
+  interval: 50
+  max_iters: 8
+  initial_validation: false
+  final_validation: true
+
+optimizer:
+  name: adamw
+  class_path: torch.optim.AdamW
+  init_args:
+    lr: 6.0e-4
+    weight_decay: 0.1
+    betas: [0.9, 0.95]
+    eps: 1.0e-8

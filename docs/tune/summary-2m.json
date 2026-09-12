@@ -1,0 +1,60 @@
+{
+  "trials": [
+    {
+      "config": "C:\\Users\\ASUS\\ArzLM\\configs\\tune\\adamw-2m.yaml",
+      "out_dir": "C:\\Users\\ASUS\\ArzLM\\runs\\tune\\adamw-2m",
+      "optimizer": "adamw",
+      "val_loss": 6.449515342712402,
+      "val_ppl": 632.3957233317295,
+      "loss": 6.387252330780029,
+      "tokens": 1998848,
+      "elapsed_s": 107.86069429997588,
+      "tokens_per_sec": 18531.755362531974,
+      "peak_allocated_vram_bytes": 2803841536,
+      "finite": true,
+      "git_commit": "1658ba2303ad9173cd60c2b9d18d2efb0b076a42"
+    },
+    {
+      "config": "C:\\Users\\ASUS\\ArzLM\\configs\\tune\\muon-jordan-lr0.01-2m.yaml",
+      "out_dir": "C:\\Users\\ASUS\\ArzLM\\runs\\tune\\muon-jordan-lr0.01-2m",
+      "optimizer": "muon_hybrid",
+      "val_loss": 6.355010986328125,
+      "val_ppl": 575.3686618136454,
+      "loss": 6.297665596008301,
+      "tokens": 1998848,
+      "elapsed_s": 126.89922570000635,
+      "tokens_per_sec": 15751.459388139512,
+      "peak_allocated_vram_bytes": 2859490816,
+      "finite": true,
+      "git_commit": "1658ba2303ad9173cd60c2b9d18d2efb0b076a42"
+    },
+    {
+      "config": "C:\\Users\\ASUS\\ArzLM\\configs\\tune\\muon-jordan-lr0.02-2m.yaml",
+      "out_dir": "C:\\Users\\ASUS\\ArzLM\\runs\\tune\\muon-jordan-lr0.02-2m",
+      "optimizer": "muon_hybrid",
+      "val_loss": 6.332474708557129,
+      "val_ppl": 562.5470126086863,
+      "loss": 6.279440402984619,
+      "tokens": 1998848,
+      "elapsed_s": 127.42379570001503,
+      "tokens_per_sec": 15686.614803923661,
+      "peak_allocated_vram_bytes": 3065404928,
+      "finite": true,
+      "git_commit": "1658ba2303ad9173cd60c2b9d18d2efb0b076a42"
+    },
+    {
+      "config": "C:\\Users\\ASUS\\ArzLM\\configs\\tune\\muon-jordan-lr0.05-2m.yaml",
+      "out_dir": "C:\\Users\\ASUS\\ArzLM\\runs\\tune\\muon-jordan-lr0.05-2m",
+      "optimizer": "muon_hybrid",
+      "val_loss": 6.306116580963135,
+      "val_ppl": 547.9130360213198,
+      "loss": 6.256927490234375,
+      "tokens": 1998848,
+      "elapsed_s": 125.4644818000088,
+      "tokens_per_sec": 15931.584551444423,
+      "peak_allocated_vram_bytes": 3261488640,
+      "finite": true,
+      "git_commit": "1658ba2303ad9173cd60c2b9d18d2efb0b076a42"
+    }
+  ]
+}

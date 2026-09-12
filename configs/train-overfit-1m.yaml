@@ -1,0 +1,36 @@
+model_config: model-arzlm-100m.yaml
+out_dir: runs/stage1-overfit-1m
+data_dir: data/prepared/overfit
+tokenizer_dir: tokenizer/trained
+precision: bf16-true
+compile: false
+seed: 42
+devices: 1
+logger_name: tensorboard
+resume: false
+num_workers: 0
+
+train:
+  save_interval: 100
+  log_interval: 10
+  global_batch_size: 8
+  micro_batch_size: 2
+  lr_warmup_steps: 20
+  max_tokens: 1000000
+  max_seq_length: 1024
+  tie_embeddings: true
+  max_norm: 1.0
+  min_lr: 6.0e-5
+
+eval:
+  interval: 50
+  max_iters: 4
+  initial_validation: true
+  final_validation: true
+
+optimizer:
+  class_path: torch.optim.AdamW
+  init_args:
+    lr: 6.0e-4
+    weight_decay: 0.1
+    betas: [0.9, 0.95]

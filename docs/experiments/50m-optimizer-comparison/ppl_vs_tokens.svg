@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="420" viewBox="0 0 900 420">
+<rect width="900" height="420" fill="#fff"/>
+<text x="450" y="22" text-anchor="middle" font-family="sans-serif" font-size="16">50M matched: val ppl vs tokens</text>
+<text x="450" y="412" text-anchor="middle" font-family="sans-serif" font-size="12">tokens</text>
+<text x="16" y="210" text-anchor="middle" font-family="sans-serif" font-size="12" transform="rotate(-90 16 210)">val perplexity</text>
+<line x1="70" y1="36" x2="70" y2="372" stroke="#333"/>
+<line x1="70" y1="372" x2="876" y2="372" stroke="#333"/>
+<line x1="70" y1="372.0" x2="876" y2="372.0" stroke="#eee"/>
+<text x="62" y="376.0" text-anchor="end" font-family="sans-serif" font-size="11">21.124</text>
+<line x1="70" y1="288.0" x2="876" y2="288.0" stroke="#eee"/>
+<text x="62" y="292.0" text-anchor="end" font-family="sans-serif" font-size="11">198.967</text>
+<line x1="70" y1="204.0" x2="876" y2="204.0" stroke="#eee"/>
+<text x="62" y="208.0" text-anchor="end" font-family="sans-serif" font-size="11">376.811</text>
+<line x1="70" y1="120.0" x2="876" y2="120.0" stroke="#eee"/>
+<text x="62" y="124.0" text-anchor="end" font-family="sans-serif" font-size="11">554.655</text>
+<line x1="70" y1="36.0" x2="876" y2="36.0" stroke="#eee"/>
+<text x="62" y="40.0" text-anchor="end" font-family="sans-serif" font-size="11">732.499</text>
+<polyline fill="none" stroke="#1f77b4" stroke-width="2" points="70.0,59.2 97.3,170.9 124.6,224.8 151.9,251.1 179.2,270.5 206.5,284.6 233.8,295.0 261.1,298.5 288.4,305.2 315.8,311.1 343.1,316.9 370.4,319.9 397.7,324.2 425.0,329.1 452.3,331.4 479.6,334.0 506.9,335.9 534.2,337.0 561.5,338.9 588.8,340.6 616.1,341.4 643.4,341.9 670.7,341.8 698.0,343.4 725.3,343.9 752.6,344.3 780.0,344.5 807.3,345.2 834.6,345.1 861.9,345.3 876.0,345.5"/>
+<text x="882.0" y="349.5" font-family="sans-serif" font-size="11" fill="#1f77b4">AdamW</text>
+<polyline fill="none" stroke="#d62728" stroke-width="2" points="70.0,82.0 97.3,206.7 124.6,239.8 151.9,255.1 179.2,271.0 206.5,284.7 233.8,292.1 261.1,297.4 288.4,301.9 315.8,304.1 343.1,308.5 370.4,308.7 397.7,312.6 425.0,319.8 452.3,322.9 479.6,325.8 506.9,328.3 534.2,328.7 561.5,335.1 588.8,337.1 616.1,339.3 643.4,341.2 670.7,341.5 698.0,344.0 725.3,345.2 752.6,346.3 780.0,346.9 807.3,347.8 834.6,348.3 861.9,348.6 876.0,348.8"/>
+<text x="882.0" y="352.8" font-family="sans-serif" font-size="11" fill="#d62728">Muon</text>
+</svg>

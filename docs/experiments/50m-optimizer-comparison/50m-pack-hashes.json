@@ -1,0 +1,33 @@
+{
+  "train_bin": "data/prepared/50m/train.bin",
+  "val_bin": "data/prepared/50m/val.bin",
+  "train_bytes": 99999000,
+  "val_bytes": 498150,
+  "train_sha256": "1077390786abd0e4be65fa3500fb1ac50a36f16722ab651cf40c64d2ad95b504",
+  "val_sha256": "eec7b6bef683308f0acb2fbbeea36762aa9ed93fada5f3f110732956c3c435af",
+  "tokenizer_sha256": "3132f2ffe4b8046661ffed8ffce19dc82ec5acbe90b469db8ef12639638e5ed8",
+  "meta": {
+    "preset": "50m",
+    "source": "fineweb-edu",
+    "dataset": "HuggingFaceFW/fineweb-edu",
+    "dataset_config": "sample-10BT",
+    "seed": 42,
+    "seq_length": 1024,
+    "eos_id": 2,
+    "bos_id": 1,
+    "litgpt_vocab_size": 32000,
+    "n_documents": 46721,
+    "n_eos": 46721,
+    "splits": {
+      "train": {
+        "files": ["train.bin"],
+        "n_tokens": 49999500
+      },
+      "val": {
+        "files": ["val.bin"],
+        "n_tokens": 249075
+      }
+    }
+  },
+  "note": "Packed once on WSL ext4. Shared by AdamW and Muon. Do not regenerate."
+}

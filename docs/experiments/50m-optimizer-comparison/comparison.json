@@ -1,0 +1,258 @@
+{
+  "primary_metric": "val_ce_vs_tokens",
+  "table": [
+    {
+      "tokens": 1638400,
+      "adamw_val_ce": 6.527136325836182,
+      "muon_val_ce": 6.453666687011719,
+      "delta_muon_minus_adamw": -0.07346963882446289,
+      "adamw_tokens": 1638400,
+      "muon_tokens": 1638400
+    },
+    {
+      "tokens": 3276800,
+      "adamw_val_ce": 6.102153778076172,
+      "muon_val_ce": 5.916576385498047,
+      "delta_muon_minus_adamw": -0.185577392578125,
+      "adamw_tokens": 3276800,
+      "muon_tokens": 3276800
+    },
+    {
+      "tokens": 4915200,
+      "adamw_val_ce": 5.807158470153809,
+      "muon_val_ce": 5.7074480056762695,
+      "delta_muon_minus_adamw": -0.09971046447753906,
+      "adamw_tokens": 4915200,
+      "muon_tokens": 4915200
+    },
+    {
+      "tokens": 6553600,
+      "adamw_val_ce": 5.624367713928223,
+      "muon_val_ce": 5.592923641204834,
+      "delta_muon_minus_adamw": -0.03144407272338867,
+      "adamw_tokens": 6553600,
+      "muon_tokens": 6553600
+    },
+    {
+      "tokens": 8192000,
+      "adamw_val_ce": 5.463528633117676,
+      "muon_val_ce": 5.4592390060424805,
+      "delta_muon_minus_adamw": -0.0042896270751953125,
+      "adamw_tokens": 8192000,
+      "muon_tokens": 8192000
+    },
+    {
+      "tokens": 9830400,
+      "adamw_val_ce": 5.329176902770996,
+      "muon_val_ce": 5.327349662780762,
+      "delta_muon_minus_adamw": -0.001827239990234375,
+      "adamw_tokens": 9830400,
+      "muon_tokens": 9830400
+    },
+    {
+      "tokens": 11468800,
+      "adamw_val_ce": 5.216023921966553,
+      "muon_val_ce": 5.248619556427002,
+      "delta_muon_minus_adamw": 0.03259563446044922,
+      "adamw_tokens": 11468800,
+      "muon_tokens": 11468800
+    },
+    {
+      "tokens": 13107200,
+      "adamw_val_ce": 5.174077987670898,
+      "muon_val_ce": 5.188076496124268,
+      "delta_muon_minus_adamw": 0.01399850845336914,
+      "adamw_tokens": 13107200,
+      "muon_tokens": 13107200
+    },
+    {
+      "tokens": 14745600,
+      "adamw_val_ce": 5.090916156768799,
+      "muon_val_ce": 5.1336212158203125,
+      "delta_muon_minus_adamw": 0.04270505905151367,
+      "adamw_tokens": 14745600,
+      "muon_tokens": 14745600
+    },
+    {
+      "tokens": 16384000,
+      "adamw_val_ce": 5.010368824005127,
+      "muon_val_ce": 5.1055779457092285,
+      "delta_muon_minus_adamw": 0.09520912170410156,
+      "adamw_tokens": 16384000,
+      "muon_tokens": 16384000
+    },
+    {
+      "tokens": 18022400,
+      "adamw_val_ce": 4.925128936767578,
+      "muon_val_ce": 5.046842098236084,
+      "delta_muon_minus_adamw": 0.12171316146850586,
+      "adamw_tokens": 18022400,
+      "muon_tokens": 18022400
+    },
+    {
+      "tokens": 19660800,
+      "adamw_val_ce": 4.87854528427124,
+      "muon_val_ce": 5.0441670417785645,
+      "delta_muon_minus_adamw": 0.16562175750732422,
+      "adamw_tokens": 19660800,
+      "muon_tokens": 19660800
+    },
+    {
+      "tokens": 21299200,
+      "adamw_val_ce": 4.807277202606201,
+      "muon_val_ce": 4.989148139953613,
+      "delta_muon_minus_adamw": 0.1818709373474121,
+      "adamw_tokens": 21299200,
+      "muon_tokens": 21299200
+    },
+    {
+      "tokens": 22937600,
+      "adamw_val_ce": 4.717566013336182,
+      "muon_val_ce": 4.880646705627441,
+      "delta_muon_minus_adamw": 0.16308069229125977,
+      "adamw_tokens": 22937600,
+      "muon_tokens": 22937600
+    },
+    {
+      "tokens": 24576000,
+      "adamw_val_ce": 4.6737470626831055,
+      "muon_val_ce": 4.829723358154297,
+      "delta_muon_minus_adamw": 0.1559762954711914,
+      "adamw_tokens": 24576000,
+      "muon_tokens": 24576000
+    },
+    {
+      "tokens": 26214400,
+      "adamw_val_ce": 4.619810104370117,
+      "muon_val_ce": 4.778240203857422,
+      "delta_muon_minus_adamw": 0.1584300994873047,
+      "adamw_tokens": 26214400,
+      "muon_tokens": 26214400
+    },
+    {
+      "tokens": 27852800,
+      "adamw_val_ce": 4.579977989196777,
+      "muon_val_ce": 4.732717514038086,
+      "delta_muon_minus_adamw": 0.1527395248413086,
+      "adamw_tokens": 27852800,
+      "muon_tokens": 27852800
+    },
+    {
+      "tokens": 29491200,
+      "adamw_val_ce": 4.5572357177734375,
+      "muon_val_ce": 4.72499942779541,
+      "delta_muon_minus_adamw": 0.16776371002197266,
+      "adamw_tokens": 29491200,
+      "muon_tokens": 29491200
+    },
+    {
+      "tokens": 31129600,
+      "adamw_val_ce": 4.5132904052734375,
+      "muon_val_ce": 4.596556186676025,
+      "delta_muon_minus_adamw": 0.08326578140258789,
+      "adamw_tokens": 31129600,
+      "muon_tokens": 31129600
+    },
+    {
+      "tokens": 32768000,
+      "adamw_val_ce": 4.471725940704346,
+      "muon_val_ce": 4.554920196533203,
+      "delta_muon_minus_adamw": 0.08319425582885742,
+      "adamw_tokens": 32768000,
+      "muon_tokens": 32768000
+    },
+    {
+      "tokens": 34406400,
+      "adamw_val_ce": 4.453258514404297,
+      "muon_val_ce": 4.5028486251831055,
+      "delta_muon_minus_adamw": 0.049590110778808594,
+      "adamw_tokens": 34406400,
+      "muon_tokens": 34406400
+    },
+    {
+      "tokens": 36044800,
+      "adamw_val_ce": 4.441464424133301,
+      "muon_val_ce": 4.4575347900390625,
+      "delta_muon_minus_adamw": 0.01607036590576172,
+      "adamw_tokens": 36044800,
+      "muon_tokens": 36044800
+    },
+    {
+      "tokens": 37683200,
+      "adamw_val_ce": 4.442287921905518,
+      "muon_val_ce": 4.451180458068848,
+      "delta_muon_minus_adamw": 0.008892536163330078,
+      "adamw_tokens": 37683200,
+      "muon_tokens": 37683200
+    },
+    {
+      "tokens": 39321600,
+      "adamw_val_ce": 4.402560234069824,
+      "muon_val_ce": 4.38818359375,
+      "delta_muon_minus_adamw": -0.014376640319824219,
+      "adamw_tokens": 39321600,
+      "muon_tokens": 39321600
+    },
+    {
+      "tokens": 40960000,
+      "adamw_val_ce": 4.389522075653076,
+      "muon_val_ce": 4.354991912841797,
+      "delta_muon_minus_adamw": -0.0345301628112793,
+      "adamw_tokens": 40960000,
+      "muon_tokens": 40960000
+    },
+    {
+      "tokens": 42598400,
+      "adamw_val_ce": 4.379411697387695,
+      "muon_val_ce": 4.325209617614746,
+      "delta_muon_minus_adamw": -0.05420207977294922,
+      "adamw_tokens": 42598400,
+      "muon_tokens": 42598400
+    },
+    {
+      "tokens": 44236800,
+      "adamw_val_ce": 4.374159812927246,
+      "muon_val_ce": 4.306944847106934,
+      "delta_muon_minus_adamw": -0.0672149658203125,
+      "adamw_tokens": 44236800,
+      "muon_tokens": 44236800
+    },
+    {
+      "tokens": 45875200,
+      "adamw_val_ce": 4.355764389038086,
+      "muon_val_ce": 4.283000946044922,
+      "delta_muon_minus_adamw": -0.07276344299316406,
+      "adamw_tokens": 45875200,
+      "muon_tokens": 45875200
+    },
+    {
+      "tokens": 47513600,
+      "adamw_val_ce": 4.358685493469238,
+      "muon_val_ce": 4.267448902130127,
+      "delta_muon_minus_adamw": -0.09123659133911133,
+      "adamw_tokens": 47513600,
+      "muon_tokens": 47513600
+    },
+    {
+      "tokens": 49152000,
+      "adamw_val_ce": 4.352875709533691,
+      "muon_val_ce": 4.256771087646484,
+      "delta_muon_minus_adamw": -0.09610462188720703,
+      "adamw_tokens": 49152000,
+      "muon_tokens": 49152000
+    },
+    {
+      "tokens": 49999872,
+      "adamw_val_ce": 4.3474273681640625,
+      "muon_val_ce": 4.251119613647461,
+      "delta_muon_minus_adamw": -0.09630775451660156,
+      "adamw_tokens": 49999872,
+      "muon_tokens": 49999872
+    }
+  ],
+  "final_adamw_val_ce": 4.3474273681640625,
+  "final_muon_val_ce": 4.251119613647461,
+  "delta_muon_minus_adamw": -0.09630775451660156,
+  "winner": "muon",
+  "note": "Recommend Muon for 250M only if it clearly wins val CE at equal tokens. Do not start 250M here."
+}

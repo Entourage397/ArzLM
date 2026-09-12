@@ -1,0 +1,88 @@
+# ArzLM-300M base pretraining: ~6.000B unique packed tokens (20 tok/param)
+# on one A100 40GB. Do not reuse arzlm-100m-base-2b paths or the laptop
+# micro-batch (4/8) that was constrained by an RTX 4070 8GB.
+#
+# Effective batch: 64 sequences * 2048 = 131,072 tokens / optimizer update.
+# Warmup is 800 optimizer steps (~104.9M tokens, ~1.75% of 6B), scaled from
+# the validated 50M/2B token-fraction (~1.64%) rather than copying step counts.
+# Muon hybrid LRs are unchanged: Jordan spectral scale does not require a
+# width-proportional Muon LR bump for this family.
+name: arzlm-300m-base-6b
+model_config: model-arzlm-300m.yaml
+out_dir: /vol/artifacts/runs/arzlm-300m-base-6b
+data_dir: /vol/data/prepared/arzlm-stem-6b-v1
+tokenizer_dir: /vol/data/tokenizer/arzlm-stem-32k-v2
+precision: bf16-true
+compile: true
+seed: 42
+devices: 1
+logger_name: csv
+resume: auto
+num_workers: 2
+
+mixture:
+  general: 0.55
+  math: 0.20
+  code: 0.15
+  science: 0.10
+
+checkpoint:
+  keep_full: 3
+  first_checkpoint_tokens: 16777216  # probation segment of the same 6B run (~16.8M tokens)
+  save_interval_tokens: 78643200
+  milestones_tokens:
+    - 1000000000
+    - 2000000000
+    - 3000000000
+    - 4000000000
+    - 5000000000
+    - 6000000000
+
+cloud:
+  pipeline_id: arzlm-300m-full-build-v1
+  gpu: A100
+  a100_usd_per_hour: 2.10
+  segment_max_seconds: 64800
+  status_commit_seconds: 60
+  projected_continue_max: 98.0
+  hard_usage_limit: 100.0
+  eval_export_reserve_usd: 2.0
+  probation_tokens: 16777216
+  probation_max_seconds: 3600
+
+train:
+  # 600 optimizer steps * 131072 tokens ≈ 78.6M tokens (~30–45 min at 30–42k tok/s)
+  save_interval: 600
+  log_interval: 10
+  global_batch_size: 64
+  micro_batch_size: 8
+  lr_warmup_steps: 800
+  max_tokens: 6000214016
+  max_time: 64800.0
+  max_seq_length: 2048
+  tie_embeddings: true
+  max_norm: 1.0
+  min_lr: 6.0e-5
+
+eval:
+  # ~1B tokens between domain vals (8192 steps * 131072)
+  interval: 8192
+  max_iters: 8
+  initial_validation: false
+  final_validation: true
+
+optimizer:
+  name: muon_hybrid
+  class_path: arzlm.training.optim.muon.SingleDeviceMuonWithAuxAdam
+  muon:
+    lr: 0.05
+    momentum: 0.95
+    weight_decay: 0.1
+    nesterov: true
+    ns_steps: 5
+    scale: jordan
+  adamw:
+    lr: 6.0e-4
+    weight_decay: 0.1
+    betas: [0.9, 0.95]
+    eps: 1.0e-8

@@ -1,0 +1,156 @@
+{
+  "environment": {
+    "python": "3.12.14",
+    "platform": "linux",
+    "pytorch": "2.11.0+cu128",
+    "cuda_runtime": "12.8",
+    "cuda_available": true,
+    "bf16_supported": true,
+    "triton": true,
+    "triton_version": "3.6.0",
+    "sdpa": {
+      "flash_sdp": true,
+      "mem_efficient_sdp": true,
+      "math_sdp": true,
+      "cudnn_sdp": true,
+      "sdp_backends": []
+    },
+    "preferred_sdpa": "flash",
+    "compile_notes": {
+      "platform": "linux",
+      "triton_available": true,
+      "triton_version": "3.6.0",
+      "recommendation": "native compile stack looks usable"
+    },
+    "nvidia_driver": "616.64",
+    "nvidia_cuda_version": null,
+    "gpu_name": "NVIDIA GeForce RTX 4070 Laptop GPU",
+    "gpu_capability": [
+      8,
+      9
+    ],
+    "gpu_total_memory_bytes": 8585216000,
+    "cuda_version": "12.8",
+    "litgpt": "0.5.13",
+    "lightning": "2.6.5"
+  },
+  "parameters": {
+    "trainable": 100094208,
+    "total": 100094208,
+    "formula": 100094208,
+    "target": 100000000
+  },
+  "compile_active": true,
+  "compile_error": null,
+  "loss": 7.475468158721924,
+  "best_train_loss": 7.294701099395752,
+  "val_loss": 7.339133262634277,
+  "val_ppl": 1539.3772994577091,
+  "steps": 40,
+  "iters": 80,
+  "tokens": 327680,
+  "elapsed_s": 16.161031620999893,
+  "tokens_per_sec": 20275.933349094346,
+  "finite": true,
+  "out_dir": "runs/tune/adamw-compile-throughput-mb4",
+  "sdpa": "flash",
+  "precision": "bf16-true",
+  "micro_batch_size": 4,
+  "global_batch_size": 8,
+  "gradient_accumulation": 2,
+  "seq_length": 1024,
+  "seed": 42,
+  "git_commit": "e19a2bb7026dcc99f5151e021c168fd923cd1b65",
+  "git_describe": "baseline-v0-2-ge19a2bb-dirty",
+  "optimizer": {
+    "kind": "adamw",
+    "class": "AdamW",
+    "spec": {
+      "name": "adamw",
+      "class_path": "torch.optim.AdamW",
+      "init_args": {
+        "lr": 0.0006,
+        "weight_decay": 0.1,
+        "betas": [
+          0.9,
+          0.95
+        ],
+        "eps": 1e-08,
+        "fused": true
+      }
+    },
+    "param_groups": [
+      {
+        "lr": 0.0006,
+        "betas": [
+          0.9,
+          0.95
+        ],
+        "eps": 1e-08,
+        "weight_decay": 0.1,
+        "amsgrad": false,
+        "maximize": false,
+        "foreach": null,
+        "capturable": false,
+        "differentiable": false,
+        "fused": true,
+        "decoupled_weight_decay": true,
+        "initial_lr": 0.0006,
+        "n_params": 100094208,
+        "n_tensors": 110
+      }
+    ]
+  },
+  "lr_schedule": "linear_warmup_cosine",
+  "flop_estimate_6nd": 196793220464640,
+  "metrics_path": "runs/tune/adamw-compile-throughput-mb4/metrics.jsonl",
+  "max_grad_norm": 368.0,
+  "last_grad_norm": 1.0234375,
+  "loss_spike_count": 0,
+  "qk_health": {
+    "qkv_rms": {
+      "mean": 0.02286142933492859,
+      "max": 0.022883744910359383,
+      "min": 0.022835562005639076
+    },
+    "norm_q_rms": {
+      "mean": 1.0,
+      "max": 1.0,
+      "min": 1.0
+    },
+    "norm_k_rms": {
+      "mean": 1.0,
+      "max": 1.0,
+      "min": 1.0
+    },
+    "qkv_max_abs": 0.12890625
+  },
+  "dynamo": {
+    "counters": {
+      "frames": {
+        "total": 2,
+        "ok": 2
+      },
+      "stats": {
+        "calls_captured": 2096,
+        "unique_graphs": 2
+      },
+      "inductor": {
+        "triton_bundler_load_static_autotuner": 45,
+        "async_compile_cache_miss": 92,
+        "async_compile_cache_hit": 45,
+        "extern_calls": 376,
+        "fxgraph_cache_hit": 3,
+        "pattern_matcher_count": 1,
+        "pattern_matcher_nodes": 2
+      },
+      "aot_autograd": {
+        "total": 2,
+        "autograd_cache_hit": 2,
+        "ok": 2
+      }
+    }
+  },
+  "peak_allocated_vram_bytes": 3790466560,
+  "peak_reserved_vram_bytes": 4328521728
+}

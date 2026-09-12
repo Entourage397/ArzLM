@@ -1,0 +1,1613 @@
+{
+  "schema_version": 1,
+  "corpus": "ArzLM-STEM-6B-v1",
+  "created_at": "2026-09-10T02:30:49.298429+00:00",
+  "policy": {
+    "fail_closed": true,
+    "never_build_from_unpinned_main": true,
+    "allow_missing_security": false,
+    "fineweb_edu_prefix": "sample/10BT/",
+    "forbid_fineweb_full_dump": true,
+    "trust_remote_code": false,
+    "documents_are_inert_text": true,
+    "checked_at_note": "2026-09-10T02:30:49.298452+00:00",
+    "local_av": {
+      "enabled": false,
+      "skip_if_unavailable": true,
+      "engine": "clamav"
+    }
+  },
+  "sources": {
+    "general": {
+      "domain": "general",
+      "dataset_id": "HuggingFaceFW/fineweb-edu",
+      "config": "sample-10BT",
+      "revision": "87f09149ef4734204d70ed1d046ddc9ca3f2b8f9",
+      "prefix": "sample/10BT/",
+      "license": "ODC-By-1.0 (dataset); Common Crawl Terms of Use for crawled pages",
+      "files": [
+        {
+          "path": "sample/10BT/013_00000.parquet",
+          "size": 540632672,
+          "sha256": "b393f51fefab26cd6f4c8f65707c1924f6666c4961a0ebebe04bb57f7ec832de",
+          "xet_hash": null,
+          "security_status": "safe",
+          "av_status": "safe",
+          "reviewed_allow_unscanned": false
+        }
+      ]
+    },
+    "math": {
+      "domain": "math",
+      "dataset_id": "HuggingFaceTB/finemath",
+      "config": "finemath-4plus",
+      "revision": "e92b25a616738fe95dc186b64dfb19f9c8525594",
+      "prefix": "finemath-4plus/",
+      "license": "ODC-By-1.0 (dataset); Common Crawl Terms of Use for crawled pages",
+      "files": [
+        {
+          "path": "finemath-4plus/train-00000-of-00064.parquet",
+          "size": 286267316,
+          "sha256": "5d0b26114b4cf309c82a4ba8f6f45857480b27812e23a46b61b45e8bbed61fe5",
+          "xet_hash": null,
+          "security_status": "safe",
+          "av_status": "safe",
+          "reviewed_allow_unscanned": false
+        },
+        {
+          "path": "finemath-4plus/train-00001-of-00064.parquet",
+          "size": 288474354,
+          "sha256": "4f38efdb251638c1a71be4ed380119bdd9966b1d6f200f6ff637e4768cc3930c",
+          "xet_hash": null,
+          "security_status": "safe",
+          "av_status": "safe",
+          "reviewed_allow_unscanned": false
+        },
+        {
+          "path": "finemath-4plus/train-00002-of-00064.parquet",
+          "size": 287634720,
+          "sha256": "aed5a2aed72e2683c6c967f669b12214c3a2370738a75b83fb92f6194217ab04",
+          "xet_hash": null,
+          "security_status": "safe",
+          "av_status": "safe",
+          "reviewed_allow_unscanned": false
+        },
+        {
+          "path": "finemath-4plus/train-00003-of-00064.parquet",
+          "size": 284689405,
+          "sha256": "b20b6da635493e3c7e151880db612bdf1bab2e6bc2fe87ed5cd21910f590aada",
+          "xet_hash": null,
+          "security_status": "safe",
+          "av_status": "safe",
+          "reviewed_allow_unscanned": false
+        },
+        {
+          "path": "finemath-4plus/train-00004-of-00064.parquet",
+          "size": 284684820,
+          "sha256": "9644be6589159f9ab85a147f71a48b4ea40ed712cb7c7b5b42bf91b1bb844973",
+          "xet_hash": null,
+          "security_status": "safe",
+          "av_status": "safe",
+          "reviewed_allow_unscanned": false
+        },
+        {
+          "path": "finemath-4plus/train-00005-of-00064.parquet",
+          "size": 284773965,
+          "sha256": "bc0e109357245f5bf91c956ec98e7d8f88e6356c08b25196e8760fe5839b2f99",
+          "xet_hash": null,
+          "security_status": "safe",
+          "av_status": "safe",
+          "reviewed_allow_unscanned": false
+        },
+        {
+          "path": "finemath-4plus/train-00006-of-00064.parquet",
+          "size": 286407909,
+          "sha256": "7afa1e173e27a492e0527fc82eb8859ff0040b79eae9aa39851c9b57aad0c95d",
+          "xet_hash": null,
+          "security_status": "safe",
+          "av_status": "safe",
+          "reviewed_allow_unscanned": false
+        },
+        {
+          "path": "finemath-4plus/train-00007-of-00064.parquet",
+          "size": 286615349,
+          "sha256": "b63045b1d32f7b10664e5e8cea9a4dfcd972cbc92e3d6eb9aa56c677ea9863b7",
+          "xet_hash": null,
+          "security_status": "safe",
+          "av_status": "safe",
+          "reviewed_allow_unscanned": false
+        },
+        {
+          "path": "finemath-4plus/train-00008-of-00064.parquet",
+          "size": 287847133,
+          "sha256": "39224cfcc751afbc04671bc9491266a90d58c30c27fd58f93551db8766ca96c6",
+          "xet_hash": null,
+          "security_status": "safe",
+          "av_status": "safe",
+          "reviewed_allow_unscanned": false
+        },
+        {
+          "path": "finemath-4plus/train-00009-of-00064.parquet",
+          "size": 288931475,
+          "sha256": "5e2b8db60462621ac0e45dd9865103f685915b09eee577f505b35f95ff601ea5",
+          "xet_hash": null,
+          "security_status": "safe",
+          "av_status": "safe",
+          "reviewed_allow_unscanned": false
+        },
+        {
+          "path": "finemath-4plus/train-00010-of-00064.parquet",
+          "size": 285916752,
+          "sha256": "9d9b4481659d3b24cc9913f2025f323bafb0d19c0e2f33f6eeb0fd82a230a018",
+          "xet_hash": null,
+          "security_status": "safe",
+          "av_status": "safe",
+          "reviewed_allow_unscanned": false
+        },
+        {
+          "path": "finemath-4plus/train-00011-of-00064.parquet",
+          "size": 287613757,
+          "sha256": "cc1f03a25f744f3595bc808a93b40ed5aa0f2b4976c0eebbadf693fe1ae9f7c9",
+          "xet_hash": null,
+          "security_status": "safe",
+          "av_status": "safe",
+          "reviewed_allow_unscanned": false
+        },
+        {
+          "path": "finemath-4plus/train-00012-of-00064.parquet",
+          "size": 286861763,
+          "sha256": "8357ab429ac19c08290ae78ee8280d75140a3d82c4f18b1e747607b70eeece93",
+          "xet_hash": null,
+          "security_status": "safe",
+          "av_status": "safe",
+          "reviewed_allow_unscanned": false
+        },
+        {
+          "path": "finemath-4plus/train-00013-of-00064.parquet",
+          "size": 287269661,
+          "sha256": "2188e377ec460f443a169d22cd44672282e5a5ea10b70ef67b66733d3e897ff2",
+          "xet_hash": null,
+          "security_status": "safe",
+          "av_status": "safe",
+          "reviewed_allow_unscanned": false
+        },
+        {
+          "path": "finemath-4plus/train-00014-of-00064.parquet",
+          "size": 285892807,
+          "sha256": "7418045311f2bac739b79175654fa97b394645d42548d7cf52ed7787ffd9883f",
+          "xet_hash": null,
+          "security_status": "safe",
+          "av_status": "safe",
+          "reviewed_allow_unscanned": false
+        },
+        {
+          "path": "finemath-4plus/train-00015-of-00064.parquet",
+          "size": 284854630,
+          "sha256": "7af8c5bcd8728514ec8bb4dd4aeeeec3cc0778818b8be6878d6a84e6b0c2c6eb",
+          "xet_hash": null,
+          "security_status": "safe",
+          "av_status": "safe",
+          "reviewed_allow_unscanned": false
+        },
+        {
+          "path": "finemath-4plus/train-00016-of-00064.parquet",
+          "size": 285230750,
+          "sha256": "4d086cac2cd42a82979903d532d39c7e87ad0088f86409f6a7c2f9e8e290e3af",
+          "xet_hash": null,
+          "security_status": "safe",
+          "av_status": "safe",
+          "reviewed_allow_unscanned": false
+        },
+        {
+          "path": "finemath-4plus/train-00017-of-00064.parquet",
+          "size": 285105883,
+          "sha256": "7188aa08c9a3a9e6f217fad9bd752a170282a3b029c158eab0e68df1927b83f1",
+          "xet_hash": null,
+          "security_status": "safe",
+          "av_status": "safe",
+          "reviewed_allow_unscanned": false
+        },
+        {
+          "path": "finemath-4plus/train-00018-of-00064.parquet",
+          "size": 286388383,
+          "sha256": "6234f2ef80ca281d8b3818e22269ab5b5a0cc72c38083b608d115d807440e2ff",
+          "xet_hash": null,
+          "security_status": "safe",
+          "av_status": "safe",
+          "reviewed_allow_unscanned": false
+        },
+        {
+          "path": "finemath-4plus/train-00019-of-00064.parquet",
+          "size": 287300048,
+          "sha256": "a6f24a84c01f792ca02c5bdbc2eff17749331be49b442a9428b916860ae8b60a",
+          "xet_hash": null,
+          "security_status": "safe",
+          "av_status": "safe",
+          "reviewed_allow_unscanned": false
+        },
+        {
+          "path": "finemath-4plus/train-00020-of-00064.parquet",
+          "size": 288418140,
+          "sha256": "938e6ffcf290d7925df11239d67fc953791c361f1d3db37527fcb5468a371a95",
+          "xet_hash": null,
+          "security_status": "safe",
+          "av_status": "safe",
+          "reviewed_allow_unscanned": false
+        },
+        {
+          "path": "finemath-4plus/train-00021-of-00064.parquet",
+          "size": 289304294,
+          "sha256": "38a5262c389a1b04cdebe2eaf7654c2c0a03e894e2a0b35e26a450682cf3651b",
+          "xet_hash": null,
+          "security_status": "safe",
+          "av_status": "safe",
+          "reviewed_allow_unscanned": false
+        },
+        {
+          "path": "finemath-4plus/train-00022-of-00064.parquet",
+          "size": 285625844,
+          "sha256": "d8f0548f5e73166ff60535ba2f219d85ab96eba23dff659411ea2876a66bd058",
+          "xet_hash": null,
+          "security_status": "safe",
+          "av_status": "safe",
+          "reviewed_allow_unscanned": false
+        },
+        {
+          "path": "finemath-4plus/train-00023-of-00064.parquet",
+          "size": 286320892,
+          "sha256": "661164ca586963621968df1ed20bb2f103ab4c5c4bd32c9a53ea020694b92ed3",
+          "xet_hash": null,
+          "security_status": "safe",
+          "av_status": "safe",
+          "reviewed_allow_unscanned": false
+        },
+        {
+          "path": "finemath-4plus/train-00024-of-00064.parquet",
+          "size": 287841727,
+          "sha256": "d1042d40e62790e2e265e9986ee2e88359e2e294d0e3e7b31fa2b1562edc3cb4",
+          "xet_hash": null,
+          "security_status": "safe",
+          "av_status": "safe",
+          "reviewed_allow_unscanned": false
+        },
+        {
+          "path": "finemath-4plus/train-00025-of-00064.parquet",
+          "size": 287597422,
+          "sha256": "d50e43d1c4523c72a1e578c0b5aeb0a52ad7da2fa2cca6184da9c359a68bbae8",
+          "xet_hash": null,
+          "security_status": "safe",
+          "av_status": "safe",
+          "reviewed_allow_unscanned": false
+        },
+        {
+          "path": "finemath-4plus/train-00026-of-00064.parquet",
+          "size": 288787284,
+          "sha256": "993f12c563bb3ad4eb6c7313434227a6df316ebb763c56e242000613316b71f3",
+          "xet_hash": null,
+          "security_status": "safe",
+          "av_status": "safe",
+          "reviewed_allow_unscanned": false
+        },
+        {
+          "path": "finemath-4plus/train-00027-of-00064.parquet",
+          "size": 287696956,
+          "sha256": "52df8a5db9e19df1b66c4db22bcffa27976c896db7f599a595e28359833bcd16",
+          "xet_hash": null,
+          "security_status": "safe",
+          "av_status": "safe",
+          "reviewed_allow_unscanned": false
+        },
+        {
+          "path": "finemath-4plus/train-00028-of-00064.parquet",
+          "size": 285140740,
+          "sha256": "e2fcc0241110c215bb69291d5acc3a36cb963a4421547065341372989196d87e",
+          "xet_hash": null,
+          "security_status": "safe",
+          "av_status": "safe",
+          "reviewed_allow_unscanned": false
+        },
+        {
+          "path": "finemath-4plus/train-00029-of-00064.parquet",
+          "size": 284671899,
+          "sha256": "33af174dbce679c11a11210e314c1da8bb0c905f352173d7a4f9c1e253752792",
+          "xet_hash": null,
+          "security_status": "safe",
+          "av_status": "safe",
+          "reviewed_allow_unscanned": false
+        },
+        {
+          "path": "finemath-4plus/train-00030-of-00064.parquet",
+          "size": 287047408,
+          "sha256": "eebf8fa736b3d01a39ffdc527f237b97515508d1d0f891c37b4b7b66e881f8ad",
+          "xet_hash": null,
+          "security_status": "safe",
+          "av_status": "safe",
+          "reviewed_allow_unscanned": false
+        },
+        {
+          "path": "finemath-4plus/train-00031-of-00064.parquet",
+          "size": 286853079,
+          "sha256": "173378335be37fecc53badf18b8d9e3751b36deca83192d656e46d283a0b790b",
+          "xet_hash": null,
+          "security_status": "safe",
+          "av_status": "safe",
+          "reviewed_allow_unscanned": false
+        },
+        {
+          "path": "finemath-4plus/train-00032-of-00064.parquet",
+          "size": 290228916,
+          "sha256": "3908b3a7770116230dc9b33fb8cdedf7e2e201bddf91c85dd67d604ef042cbeb",
+          "xet_hash": null,
+          "security_status": "safe",
+          "av_status": "safe",
+          "reviewed_allow_unscanned": false
+        },
+        {
+          "path": "finemath-4plus/train-00033-of-00064.parquet",
+          "size": 287898199,
+          "sha256": "59c396794e2a3beaf424cd38a300054f70e81f5241dabca1833d0ae8774a94bf",
+          "xet_hash": null,
+          "security_status": "safe",
+          "av_status": "safe",
+          "reviewed_allow_unscanned": false
+        },
+        {
+          "path": "finemath-4plus/train-00034-of-00064.parquet",
+          "size": 289810386,
+          "sha256": "82b84eec9e9ef34dce9161c0309038b26ed44269a8bd1d0e0b03702cccfbbbe5",
+          "xet_hash": null,
+          "security_status": "safe",
+          "av_status": "safe",
+          "reviewed_allow_unscanned": false
+        },
+        {
+          "path": "finemath-4plus/train-00035-of-00064.parquet",
+          "size": 284461159,
+          "sha256": "460fb500ce95a04c649a5defa26465fd202dac8be102c93ad008a4ff413c9125",
+          "xet_hash": null,
+          "security_status": "safe",
+          "av_status": "safe",
+          "reviewed_allow_unscanned": false
+        },
+        {
+          "path": "finemath-4plus/train-00036-of-00064.parquet",
+          "size": 288088785,
+          "sha256": "210ed04eef3f67f69e8b33af70169ffa675ead7040fda5ff752dcfd53cb3f3c0",
+          "xet_hash": null,
+          "security_status": "safe",
+          "av_status": "safe",
+          "reviewed_allow_unscanned": false
+        },
+        {
+          "path": "finemath-4plus/train-00037-of-00064.parquet",
+          "size": 288490473,
+          "sha256": "3f1f800ad82dbd58f76d8bf614132e021c0966cd474563458758f4f4ff8ef431",
+          "xet_hash": null,
+          "security_status": "safe",
+          "av_status": "safe",
+          "reviewed_allow_unscanned": false
+        },
+        {
+          "path": "finemath-4plus/train-00038-of-00064.parquet",
+          "size": 286826637,
+          "sha256": "79ec06e3c4178bbe530bcf513787cf983c8194cd71ef68a059190d1e88cd09d8",
+          "xet_hash": null,
+          "security_status": "safe",
+          "av_status": "safe",
+          "reviewed_allow_unscanned": false
+        },
+        {
+          "path": "finemath-4plus/train-00039-of-00064.parquet",
+          "size": 287576805,
+          "sha256": "2b893fdc56c818f601f100d4e7b4ee5183ab337b97e041f870ede9ff434b0d91",
+          "xet_hash": null,
+          "security_status": "safe",
+          "av_status": "safe",
+          "reviewed_allow_unscanned": false
+        },
+        {
+          "path": "finemath-4plus/train-00040-of-00064.parquet",
+          "size": 286200864,
+          "sha256": "84eef483837d4d4cdf68512eac5b18eb8f2b19dc98c9518c31454fc96daa48a0",
+          "xet_hash": null,
+          "security_status": "safe",
+          "av_status": "safe",
+          "reviewed_allow_unscanned": false
+        },
+        {
+          "path": "finemath-4plus/train-00041-of-00064.parquet",
+          "size": 287168422,
+          "sha256": "a80a637295c6ca4084d508615f68e40fa7d5d99653014a049132a4067b96a17f",
+          "xet_hash": null,
+          "security_status": "safe",
+          "av_status": "safe",
+          "reviewed_allow_unscanned": false
+        },
+        {
+          "path": "finemath-4plus/train-00042-of-00064.parquet",
+          "size": 285668052,
+          "sha256": "209b4839e8324cd849e58355092d12884a32f049201aaa1fb5072d6ea8232afe",
+          "xet_hash": null,
+          "security_status": "safe",
+          "av_status": "safe",
+          "reviewed_allow_unscanned": false
+        },
+        {
+          "path": "finemath-4plus/train-00043-of-00064.parquet",
+          "size": 286461543,
+          "sha256": "d6e5706cc53f79015065308877cedf33e82c17197cbf1be0b937c3a47270d391",
+          "xet_hash": null,
+          "security_status": "safe",
+          "av_status": "safe",
+          "reviewed_allow_unscanned": false
+        },
+        {
+          "path": "finemath-4plus/train-00044-of-00064.parquet",
+          "size": 287724326,
+          "sha256": "aeb894d1d5c9fe7b7f92bc3a90d0bade32987846ec56ffccedf1588f8634f0b5",
+          "xet_hash": null,
+          "security_status": "safe",
+          "av_status": "safe",
+          "reviewed_allow_unscanned": false
+        },
+        {
+          "path": "finemath-4plus/train-00045-of-00064.parquet",
+          "size": 285137076,
+          "sha256": "2c3e25eccc80c71af05c1c27a260fb25d5743169dbace5e3ecdd18e6b96c277e",
+          "xet_hash": null,
+          "security_status": "safe",
+          "av_status": "safe",
+          "reviewed_allow_unscanned": false
+        },
+        {
+          "path": "finemath-4plus/train-00046-of-00064.parquet",
+          "size": 287466256,
+          "sha256": "2d0803166fa42fbe1237bbc36d7348c6ab210a2958684b6ad2b1a1e2fffb0960",
+          "xet_hash": null,
+          "security_status": "safe",
+          "av_status": "safe",
+          "reviewed_allow_unscanned": false
+        },
+        {
+          "path": "finemath-4plus/train-00047-of-00064.parquet",
+          "size": 286816750,
+          "sha256": "072dd4aee4e5f09e647109b0155edeed9364417f891f64b60ae9453a8f57543f",
+          "xet_hash": null,
+          "security_status": "safe",
+          "av_status": "safe",
+          "reviewed_allow_unscanned": false
+        },
+        {
+          "path": "finemath-4plus/train-00048-of-00064.parquet",
+          "size": 286142969,
+          "sha256": "d30c8f3681b94bb799d4c64feea211ef2e85a398f3cd0d7ae2802468653d0231",
+          "xet_hash": null,
+          "security_status": "safe",
+          "av_status": "safe",
+          "reviewed_allow_unscanned": false
+        },
+        {
+          "path": "finemath-4plus/train-00049-of-00064.parquet",
+          "size": 287762910,
+          "sha256": "844b6c543e8493b8570fc83f5f152ebaa4a324f36f86ded5c8b22158242f5976",
+          "xet_hash": null,
+          "security_status": "safe",
+          "av_status": "safe",
+          "reviewed_allow_unscanned": false
+        },
+        {
+          "path": "finemath-4plus/train-00050-of-00064.parquet",
+          "size": 288979859,
+          "sha256": "493e3155e54f0b43e350cbd732f2733949d9237b6e65025f473d8aec81bb631b",
+          "xet_hash": null,
+          "security_status": "safe",
+          "av_status": "safe",
+          "reviewed_allow_unscanned": false
+        },
+        {
+          "path": "finemath-4plus/train-00051-of-00064.parquet",
+          "size": 288516393,
+          "sha256": "79e67c3d2bea7331f5c0d0def3aded21a2101852e26feddcda2f87491119e6d8",
+          "xet_hash": null,
+          "security_status": "safe",
+          "av_status": "safe",
+          "reviewed_allow_unscanned": false
+        },
+        {
+          "path": "finemath-4plus/train-00052-of-00064.parquet",
+          "size": 286603913,
+          "sha256": "f43826fecf00f41cdf78f3c4d1b17bd80b8c816f5b53414ee2bf0fd51c55a0f0",
+          "xet_hash": null,
+          "security_status": "safe",
+          "av_status": "safe",
+          "reviewed_allow_unscanned": false
+        },
+        {
+          "path": "finemath-4plus/train-00053-of-00064.parquet",
+          "size": 288438678,
+          "sha256": "e91ed59b94cab8cd1a763c6e768eca1fe52183c4029a9f81896836cf8df8332c",
+          "xet_hash": null,
+          "security_status": "safe",
+          "av_status": "safe",
+          "reviewed_allow_unscanned": false
+        },
+        {
+          "path": "finemath-4plus/train-00054-of-00064.parquet",
+          "size": 287848798,
+          "sha256": "fbe428def745237f8c4d7c175ed07700bfd043018b4ffb72f52f6308e737b3e9",
+          "xet_hash": null,
+          "security_status": "safe",
+          "av_status": "safe",
+          "reviewed_allow_unscanned": false
+        },
+        {
+          "path": "finemath-4plus/train-00055-of-00064.parquet",
+          "size": 284921841,
+          "sha256": "a097663e3e928e36c2713aedfa1b48c6784e6874ebd57570c1b591c9cf2a4247",
+          "xet_hash": null,
+          "security_status": "safe",
+          "av_status": "safe",
+          "reviewed_allow_unscanned": false
+        },
+        {
+          "path": "finemath-4plus/train-00056-of-00064.parquet",
+          "size": 285402320,
+          "sha256": "e06d3ada6b375560cff610049221a23df5cd881cd8463d5b18841d09daf420c3",
+          "xet_hash": null,
+          "security_status": "safe",
+          "av_status": "safe",
+          "reviewed_allow_unscanned": false
+        },
+        {
+          "path": "finemath-4plus/train-00057-of-00064.parquet",
+          "size": 285845878,
+          "sha256": "2c4652d889bfb0ae24464c05c9d77cd2cff4e69f8f6ade0062acc67eac35ab2f",
+          "xet_hash": null,
+          "security_status": "safe",
+          "av_status": "safe",
+          "reviewed_allow_unscanned": false
+        },
+        {
+          "path": "finemath-4plus/train-00058-of-00064.parquet",
+          "size": 288566069,
+          "sha256": "2a66a63e3f1a431bc08b67cdd3a4e3bf74c21efadf5632df8a0179968bedc8cd",
+          "xet_hash": null,
+          "security_status": "safe",
+          "av_status": "safe",
+          "reviewed_allow_unscanned": false
+        },
+        {
+          "path": "finemath-4plus/train-00059-of-00064.parquet",
+          "size": 286510764,
+          "sha256": "db590431963f0915340b87a00ef011e0c837b088b7b15e992bc22fb7c3b85c95",
+          "xet_hash": null,
+          "security_status": "safe",
+          "av_status": "safe",
+          "reviewed_allow_unscanned": false
+        },
+        {
+          "path": "finemath-4plus/train-00060-of-00064.parquet",
+          "size": 284239808,
+          "sha256": "d8ee743cf9f6eaa336b99c50b556c6aea1fa34a8209bbd3220716444485aa27f",
+          "xet_hash": null,
+          "security_status": "safe",
+          "av_status": "safe",
+          "reviewed_allow_unscanned": false
+        },
+        {
+          "path": "finemath-4plus/train-00061-of-00064.parquet",
+          "size": 288814138,
+          "sha256": "c78473e2f04cefe953ebe26c8d5fdee1b1a4b70c4b95a0210314304a9ba175e7",
+          "xet_hash": null,
+          "security_status": "safe",
+          "av_status": "safe",
+          "reviewed_allow_unscanned": false
+        },
+        {
+          "path": "finemath-4plus/train-00062-of-00064.parquet",
+          "size": 287258638,
+          "sha256": "0ac3a1f547029023ddc36661cc334fd67c220b0863808d589f23bd9b724fefd3",
+          "xet_hash": null,
+          "security_status": "safe",
+          "av_status": "safe",
+          "reviewed_allow_unscanned": false
+        },
+        {
+          "path": "finemath-4plus/train-00063-of-00064.parquet",
+          "size": 289240443,
+          "sha256": "ca21ff1b4127b1da10243f7e675f752c5c6cb9b6f7e57448ba01bb1a1824dfee",
+          "xet_hash": null,
+          "security_status": "safe",
+          "av_status": "safe",
+          "reviewed_allow_unscanned": false
+        }
+      ]
+    },
+    "science": {
+      "domain": "science",
+      "dataset_id": "allenai/peS2o",
+      "config": "v2",
+      "revision": "636a503e44a3ca1b58e01fb61eab0825cd574de0",
+      "prefix": "data/v2/",
+      "license": "ODC-By (corpus). Paper copyrights remain with authors.",
+      "files": [
+        {
+          "path": "data/v2/train-00000-of-00020.json.gz",
+          "size": 1575272287,
+          "sha256": "3d611791c7d89d7915a4089e5f70e6dfc66b0c3e85ace1e5e624e2b96f0e2a29",
+          "xet_hash": null,
+          "security_status": "safe",
+          "av_status": "safe",
+          "reviewed_allow_unscanned": false
+        },
+        {
+          "path": "data/v2/train-00001-of-00020.json.gz",
+          "size": 1574560033,
+          "sha256": "d0e21450d520e13375336ab2698e887d3846ea973450867627f22096bdbd74a0",
+          "xet_hash": null,
+          "security_status": "safe",
+          "av_status": "safe",
+          "reviewed_allow_unscanned": false
+        },
+        {
+          "path": "data/v2/train-00002-of-00020.json.gz",
+          "size": 1575994864,
+          "sha256": "a5d42ab3006c5ea74198519f66be6574c0f6f4799198f5d28d0eec9c9c26905c",
+          "xet_hash": null,
+          "security_status": "safe",
+          "av_status": "safe",
+          "reviewed_allow_unscanned": false
+        },
+        {
+          "path": "data/v2/train-00003-of-00020.json.gz",
+          "size": 1572347188,
+          "sha256": "00d1728fdd678b5ddafabf940832f1249bac4c969202c34164d13143ea87e2c3",
+          "xet_hash": null,
+          "security_status": "safe",
+          "av_status": "safe",
+          "reviewed_allow_unscanned": false
+        },
+        {
+          "path": "data/v2/train-00004-of-00020.json.gz",
+          "size": 1576378492,
+          "sha256": "903f763ac424f1e9846d6fc5f1b7800b40c8ed6dc12fb658df12c17e5b89317c",
+          "xet_hash": null,
+          "security_status": "safe",
+          "av_status": "safe",
+          "reviewed_allow_unscanned": false
+        },
+        {
+          "path": "data/v2/train-00005-of-00020.json.gz",
+          "size": 1573107724,
+          "sha256": "e7b34125faaa2a4bf67dce970d6bf5498de04e61d4ec9f579312854c6c9d5308",
+          "xet_hash": null,
+          "security_status": "safe",
+          "av_status": "safe",
+          "reviewed_allow_unscanned": false
+        },
+        {
+          "path": "data/v2/train-00006-of-00020.json.gz",
+          "size": 1574387579,
+          "sha256": "26d04d202017bde5c73f69e286294c7d4adad1bf2bdc58a46ac68e137791e22f",
+          "xet_hash": null,
+          "security_status": "safe",
+          "av_status": "safe",
+          "reviewed_allow_unscanned": false
+        },
+        {
+          "path": "data/v2/train-00007-of-00020.json.gz",
+          "size": 1573938451,
+          "sha256": "ee886df1514155eb63fc7a6b26ba60c7ff9c3c3e189759371182eadac1758c45",
+          "xet_hash": null,
+          "security_status": "safe",
+          "av_status": "safe",
+          "reviewed_allow_unscanned": false
+        },
+        {
+          "path": "data/v2/train-00008-of-00020.json.gz",
+          "size": 1575673927,
+          "sha256": "51b6e423b5fb6bc46431141f12723ddb33b6f77fe3bed30cc787688a27ce7b26",
+          "xet_hash": null,
+          "security_status": "safe",
+          "av_status": "safe",
+          "reviewed_allow_unscanned": false
+        },
+        {
+          "path": "data/v2/train-00009-of-00020.json.gz",
+          "size": 1572398251,
+          "sha256": "74107fba608238311ad379b264102c5bceb54d5eaf353c7e6901b0a772a10fe8",
+          "xet_hash": null,
+          "security_status": "safe",
+          "av_status": "safe",
+          "reviewed_allow_unscanned": false
+        }
+      ]
+    },
+    "code": {
+      "domain": "code",
+      "dataset_id": "HuggingFaceTB/stack-edu",
+      "config": null,
+      "revision": "eeec5caac5cc3758a18f1d3ba4416837a9ba814c",
+      "prefix": "(per-language parquet)",
+      "license": "Dataset intended for LM training; file contents are Software Heritage blobs under original FOSS licenses (The Stack v2 terms). Training must follow Software Heritage LLM principles. We keep permissive-license files and record blob_id provenance.",
+      "files": [
+        {
+          "path": "C/train-00000-of-00002.parquet",
+          "size": 285895794,
+          "sha256": "202e212704307ef2c91cb3c82638e52d0590d4ca78b6a8768a598d18f79f28fd",
+          "xet_hash": null,
+          "security_status": "safe",
+          "av_status": "safe",
+          "reviewed_allow_unscanned": false
+        },
+        {
+          "path": "C/train-00001-of-00002.parquet",
+          "size": 285920259,
+          "sha256": "85e65a2630e6627f50e2e8443097d780549509a9b24960c0fb5c914c37f68b25",
+          "xet_hash": null,
+          "security_status": "safe",
+          "av_status": "safe",
+          "reviewed_allow_unscanned": false
+        },
+        {
+          "path": "CSharp/train-00000-of-00003.parquet",
+          "size": 410658364,
+          "sha256": "6beaf6f11304350be93d78dedd482529f80b61eafff1a2cd6aa33d2ab80219fd",
+          "xet_hash": null,
+          "security_status": "safe",
+          "av_status": "safe",
+          "reviewed_allow_unscanned": false
+        },
+        {
+          "path": "CSharp/train-00001-of-00003.parquet",
+          "size": 410716308,
+          "sha256": "2b14c9ccc7a75461f288c310d9d55b203a796f19c769921f63369f72957e8f8b",
+          "xet_hash": null,
+          "security_status": "safe",
+          "av_status": "safe",
+          "reviewed_allow_unscanned": false
+        },
+        {
+          "path": "CSharp/train-00002-of-00003.parquet",
+          "size": 410640867,
+          "sha256": "cc264d43fc74fc562f6f3fdf87b5a92d0facccbe9d6921dc111e98ae25cfe5fe",
+          "xet_hash": null,
+          "security_status": "safe",
+          "av_status": "safe",
+          "reviewed_allow_unscanned": false
+        },
+        {
+          "path": "Cpp/train-00000-of-00004.parquet",
+          "size": 408155819,
+          "sha256": "232acd36bdabcbff9eb61c34f31aac933f1317ba7b3ae4022b38fe36e71be5f0",
+          "xet_hash": null,
+          "security_status": "safe",
+          "av_status": "safe",
+          "reviewed_allow_unscanned": false
+        },
+        {
+          "path": "Cpp/train-00001-of-00004.parquet",
+          "size": 408201065,
+          "sha256": "7c73d327ec0340cddc1547460e82f174f615881c0c847f674cb0e55a481ce6fd",
+          "xet_hash": null,
+          "security_status": "safe",
+          "av_status": "safe",
+          "reviewed_allow_unscanned": false
+        },
+        {
+          "path": "Cpp/train-00002-of-00004.parquet",
+          "size": 408226418,
+          "sha256": "3ecf1df57314e2c0279d3689079128b0d30a4f9639b94f203daf860a4d2e1e30",
+          "xet_hash": null,
+          "security_status": "safe",
+          "av_status": "safe",
+          "reviewed_allow_unscanned": false
+        },
+        {
+          "path": "Cpp/train-00003-of-00004.parquet",
+          "size": 408220495,
+          "sha256": "377dd962d1168b4471c1714041f042bf9034ad2aefe3833149a76b494fda69d3",
+          "xet_hash": null,
+          "security_status": "safe",
+          "av_status": "safe",
+          "reviewed_allow_unscanned": false
+        },
+        {
+          "path": "Go/train-00000-of-00001.parquet",
+          "size": 179388495,
+          "sha256": "f6111b5521738255206d446c7aad91822735013183267c00cc2a221b12cd8c3c",
+          "xet_hash": null,
+          "security_status": "safe",
+          "av_status": "safe",
+          "reviewed_allow_unscanned": false
+        },
+        {
+          "path": "Java/train-00000-of-00011.parquet",
+          "size": 481093982,
+          "sha256": "dcb6a63f9d1f9086179914aa806e65542c8a24a7c54a80fff3b999bc4ada71de",
+          "xet_hash": null,
+          "security_status": "safe",
+          "av_status": "safe",
+          "reviewed_allow_unscanned": false
+        },
+        {
+          "path": "Java/train-00001-of-00011.parquet",
+          "size": 480972468,
+          "sha256": "23878fc155bcde5e172f045bdbc5a075126e04c1f3260566683e157bccadd83f",
+          "xet_hash": null,
+          "security_status": "safe",
+          "av_status": "safe",
+          "reviewed_allow_unscanned": false
+        },
+        {
+          "path": "Java/train-00002-of-00011.parquet",
+          "size": 481089004,
+          "sha256": "6cadbb9c859758eee037633cb5f46a849ee5542a7ea4560a41b2e8861ebfab04",
+          "xet_hash": null,
+          "security_status": "safe",
+          "av_status": "safe",
+          "reviewed_allow_unscanned": false
+        },
+        {
+          "path": "Java/train-00003-of-00011.parquet",
+          "size": 481140330,
+          "sha256": "584859deed5e0b0d95dbee43223383252bc4299c7229b2333f3569d13ec8a766",
+          "xet_hash": null,
+          "security_status": "safe",
+          "av_status": "safe",
+          "reviewed_allow_unscanned": false
+        },
+        {
+          "path": "Java/train-00004-of-00011.parquet",
+          "size": 481024286,
+          "sha256": "4ecdef50f7bd9a64ecc3c1782ecfcb60fa5b9da5cea7cccd99bbef60829d6fbe",
+          "xet_hash": null,
+          "security_status": "safe",
+          "av_status": "safe",
+          "reviewed_allow_unscanned": false
+        },
+        {
+          "path": "Java/train-00005-of-00011.parquet",
+          "size": 481005772,
+          "sha256": "5198334fa8a1a64b7b908ea2860242e005106ee2694dbfab3dbd9c583694a81b",
+          "xet_hash": null,
+          "security_status": "safe",
+          "av_status": "safe",
+          "reviewed_allow_unscanned": false
+        },
+        {
+          "path": "Java/train-00006-of-00011.parquet",
+          "size": 481137802,
+          "sha256": "873b63ff679316fcc986b95006c3db6be1a1c6cc3cd469c20b7a295e8ac14b01",
+          "xet_hash": null,
+          "security_status": "safe",
+          "av_status": "safe",
+          "reviewed_allow_unscanned": false
+        },
+        {
+          "path": "Java/train-00007-of-00011.parquet",
+          "size": 481081862,
+          "sha256": "bb3cd0d8ea0c5364be2f695ebd493a00bc3eefe45087f877dff4e163702beff9",
+          "xet_hash": null,
+          "security_status": "safe",
+          "av_status": "safe",
+          "reviewed_allow_unscanned": false
+        },
+        {
+          "path": "Java/train-00008-of-00011.parquet",
+          "size": 481036473,
+          "sha256": "f821586c20a5a06e9fddbc0ffcd4c0438a1b473424b9d4cb2377f53b29c52ed5",
+          "xet_hash": null,
+          "security_status": "safe",
+          "av_status": "safe",
+          "reviewed_allow_unscanned": false
+        },
+        {
+          "path": "Java/train-00009-of-00011.parquet",
+          "size": 481067956,
+          "sha256": "c4be29e89f55f789f1d136fa440d5ba10230107c72a810941cb4eb2001bc388e",
+          "xet_hash": null,
+          "security_status": "safe",
+          "av_status": "safe",
+          "reviewed_allow_unscanned": false
+        },
+        {
+          "path": "Java/train-00010-of-00011.parquet",
+          "size": 481017862,
+          "sha256": "4d370853a8c8353c9f1e43ceebdc870aff626e9bb9b94b9a3b9b8aefda39841f",
+          "xet_hash": null,
+          "security_status": "safe",
+          "av_status": "safe",
+          "reviewed_allow_unscanned": false
+        },
+        {
+          "path": "JavaScript/train-00000-of-00003.parquet",
+          "size": 429067183,
+          "sha256": "486657e11ed4b3c67db5fc9655be01181897c7ab8226338cca17ea1de8fcdef2",
+          "xet_hash": null,
+          "security_status": "safe",
+          "av_status": "safe",
+          "reviewed_allow_unscanned": false
+        },
+        {
+          "path": "JavaScript/train-00001-of-00003.parquet",
+          "size": 429038200,
+          "sha256": "4902a95238f83bf40ecc942a62728acab8f3e1b7859a8377a41b1512da76cf82",
+          "xet_hash": null,
+          "security_status": "safe",
+          "av_status": "safe",
+          "reviewed_allow_unscanned": false
+        },
+        {
+          "path": "JavaScript/train-00002-of-00003.parquet",
+          "size": 428961128,
+          "sha256": "52a3d8851b47f9debd315957240927118d54976b875572961c7c054285d3425e",
+          "xet_hash": null,
+          "security_status": "safe",
+          "av_status": "safe",
+          "reviewed_allow_unscanned": false
+        },
+        {
+          "path": "Markdown/train-00000-of-00005.parquet",
+          "size": 411792258,
+          "sha256": "52d49ef4b73901e86ec1dd7fedd312506bfe4deb03624309bde51616410d4738",
+          "xet_hash": null,
+          "security_status": "safe",
+          "av_status": "safe",
+          "reviewed_allow_unscanned": false
+        },
+        {
+          "path": "Markdown/train-00001-of-00005.parquet",
+          "size": 411841484,
+          "sha256": "b71e8fcf5c1d014263dad9c29c48ee6dffdee9d8bd23c7fb37d9761643c8f35e",
+          "xet_hash": null,
+          "security_status": "safe",
+          "av_status": "safe",
+          "reviewed_allow_unscanned": false
+        },
+        {
+          "path": "Markdown/train-00002-of-00005.parquet",
+          "size": 411702146,
+          "sha256": "6722d8f2dcae6ae29ef9901697d187d5eb6d5740e4544c9496126d7f380e5691",
+          "xet_hash": null,
+          "security_status": "safe",
+          "av_status": "safe",
+          "reviewed_allow_unscanned": false
+        },
+        {
+          "path": "Markdown/train-00003-of-00005.parquet",
+          "size": 411676452,
+          "sha256": "507b202eab2a3f45faaf559fa8b7feea470ac1f008bdd3d390d70edec6e7bf07",
+          "xet_hash": null,
+          "security_status": "safe",
+          "av_status": "safe",
+          "reviewed_allow_unscanned": false
+        },
+        {
+          "path": "Markdown/train-00004-of-00005.parquet",
+          "size": 411759852,
+          "sha256": "972ca726fe5583d8db5731b7b1670a7a349a93bdf195a7d0abf1f7a32121a628",
+          "xet_hash": null,
+          "security_status": "safe",
+          "av_status": "safe",
+          "reviewed_allow_unscanned": false
+        },
+        {
+          "path": "PHP/train-00000-of-00002.parquet",
+          "size": 491719260,
+          "sha256": "56100cc4c6a9a0fd44cec41182a3eb811d30c7ff88ed93dccf1090c0971111ea",
+          "xet_hash": null,
+          "security_status": "safe",
+          "av_status": "safe",
+          "reviewed_allow_unscanned": false
+        },
+        {
+          "path": "PHP/train-00001-of-00002.parquet",
+          "size": 491779546,
+          "sha256": "f30a42e622c5073dcaa04e509eda9e19140e95dbe311d638eaec7595a2333f26",
+          "xet_hash": null,
+          "security_status": "safe",
+          "av_status": "safe",
+          "reviewed_allow_unscanned": false
+        },
+        {
+          "path": "Python/train-00000-of-00005.parquet",
+          "size": 500150393,
+          "sha256": "f0e25975bff184163a7ff1aca53678617c6eace1328b1b2c51a39ff79a6262bd",
+          "xet_hash": null,
+          "security_status": "safe",
+          "av_status": "safe",
+          "reviewed_allow_unscanned": false
+        },
+        {
+          "path": "Python/train-00001-of-00005.parquet",
+          "size": 500201312,
+          "sha256": "59e042dc6d5448b935f908c0d41afaad73ba8f2dc33ecde4b5ef395e5689d9e1",
+          "xet_hash": null,
+          "security_status": "safe",
+          "av_status": "safe",
+          "reviewed_allow_unscanned": false
+        },
+        {
+          "path": "Python/train-00002-of-00005.parquet",
+          "size": 500172909,
+          "sha256": "976e623d0a8d2b8fb1c3fec0fbd1d7f237a80a19b32e91f399259cb33e9208f7",
+          "xet_hash": null,
+          "security_status": "safe",
+          "av_status": "safe",
+          "reviewed_allow_unscanned": false
+        },
+        {
+          "path": "Python/train-00003-of-00005.parquet",
+          "size": 500169900,
+          "sha256": "81d0de22657b77282312e38db7b1ea4edaf0fcb5e04d4fa0b276f2e4e68872b8",
+          "xet_hash": null,
+          "security_status": "safe",
+          "av_status": "safe",
+          "reviewed_allow_unscanned": false
+        },
+        {
+          "path": "Python/train-00004-of-00005.parquet",
+          "size": 500100572,
+          "sha256": "6190c01cdb603cf602ac01f770a476f7b924630f2a46b1bed89622903d869a73",
+          "xet_hash": null,
+          "security_status": "safe",
+          "av_status": "safe",
+          "reviewed_allow_unscanned": false
+        },
+        {
+          "path": "Ruby/train-00000-of-00001.parquet",
+          "size": 284535771,
+          "sha256": "657605ae0ec2419304992a10dd9b0a31d47292c69524ad793bb052183bf0abf4",
+          "xet_hash": null,
+          "security_status": "safe",
+          "av_status": "safe",
+          "reviewed_allow_unscanned": false
+        },
+        {
+          "path": "Rust/train-00000-of-00001.parquet",
+          "size": 103158397,
+          "sha256": "38c9c6e658c273cbde075a51312fa53aec4a4f26c0bffcefe73da5c70e7061f6",
+          "xet_hash": null,
+          "security_status": "safe",
+          "av_status": "safe",
+          "reviewed_allow_unscanned": false
+        },
+        {
+          "path": "SQL/train-00000-of-00001.parquet",
+          "size": 261176608,
+          "sha256": "2f08a57e42620bdf6302fe083d48fe9954bff5c949ca3fe4fe3c2729087c141f",
+          "xet_hash": null,
+          "security_status": "safe",
+          "av_status": "safe",
+          "reviewed_allow_unscanned": false
+        },
+        {
+          "path": "Shell/train-00000-of-00001.parquet",
+          "size": 394872047,
+          "sha256": "d64ad0da3bd626868954ae36523290fa24cb977790f261d427a4a71dc31e5bf7",
+          "xet_hash": null,
+          "security_status": "safe",
+          "av_status": "safe",
+          "reviewed_allow_unscanned": false
+        },
+        {
+          "path": "Swift/train-00000-of-00001.parquet",
+          "size": 257883733,
+          "sha256": "6a63b2de6a393f44dacd929c1a8098a373a39e1f81015dd1387e402f8e79a3ca",
+          "xet_hash": null,
+          "security_status": "safe",
+          "av_status": "safe",
+          "reviewed_allow_unscanned": false
+        },
+        {
+          "path": "TypeScript/train-00000-of-00001.parquet",
+          "size": 425942502,
+          "sha256": "2efb24b6e8b365e95e5ade67d51dd7a5e2a1c365affdc232fdf57fa11e8aad97",
+          "xet_hash": null,
+          "security_status": "safe",
+          "av_status": "safe",
+          "reviewed_allow_unscanned": false
+        }
+      ]
+    }
+  },
+  "supplements": [
+    {
+      "domain": "general",
+      "dataset_id": "HuggingFaceTB/smollm-corpus",
+      "config": null,
+      "revision": "3ba9d605774198c5868892d7a8deda78031a781f",
+      "prefix": "cosmopedia-v2/",
+      "license": "see Hub dataset card",
+      "files": [
+        {
+          "path": "cosmopedia-v2/train-00000-of-00104.parquet",
+          "size": 1174424341,
+          "sha256": "5a25721146377d6e7f288c244e991df93e672b8cc3e535fd4aac5da4cdb1491d",
+          "xet_hash": null,
+          "security_status": "safe",
+          "av_status": "safe",
+          "reviewed_allow_unscanned": false
+        },
+        {
+          "path": "cosmopedia-v2/train-00001-of-00104.parquet",
+          "size": 1175620980,
+          "sha256": "6d7662f05a7652ce0075e5986bd69161943baf640c15b6ef720cfaef11c4ae60",
+          "xet_hash": null,
+          "security_status": "safe",
+          "av_status": "safe",
+          "reviewed_allow_unscanned": false
+        },
+        {
+          "path": "cosmopedia-v2/train-00002-of-00104.parquet",
+          "size": 1177666049,
+          "sha256": "2c3ec2f6507548a1cea06b5d9da049ba885ff2610a39c5e63b9d3eda091eb5de",
+          "xet_hash": null,
+          "security_status": "safe",
+          "av_status": "safe",
+          "reviewed_allow_unscanned": false
+        },
+        {
+          "path": "cosmopedia-v2/train-00003-of-00104.parquet",
+          "size": 1174956442,
+          "sha256": "60cae193f3c0ca186d162ef237eb57dccbe5d8da26e8f7c8b93f374910963599",
+          "xet_hash": null,
+          "security_status": "safe",
+          "av_status": "safe",
+          "reviewed_allow_unscanned": false
+        },
+        {
+          "path": "cosmopedia-v2/train-00004-of-00104.parquet",
+          "size": 1176725376,
+          "sha256": "f9c962f2182049bdc28b4616527a4683f3d54d58404d37a5e240c30240da8efd",
+          "xet_hash": null,
+          "security_status": "safe",
+          "av_status": "safe",
+          "reviewed_allow_unscanned": false
+        },
+        {
+          "path": "cosmopedia-v2/train-00005-of-00104.parquet",
+          "size": 1177410933,
+          "sha256": "d080dcf75e284e56f0a2c3275998030fbbcca1786e1b8f19bf4169c23294dae7",
+          "xet_hash": null,
+          "security_status": "safe",
+          "av_status": "safe",
+          "reviewed_allow_unscanned": false
+        },
+        {
+          "path": "cosmopedia-v2/train-00006-of-00104.parquet",
+          "size": 1174894520,
+          "sha256": "9c75c4142c0cae4ee8da9dbfddbc5b73fe213a55530dcfac012e91ef6bd9560e",
+          "xet_hash": null,
+          "security_status": "safe",
+          "av_status": "safe",
+          "reviewed_allow_unscanned": false
+        },
+        {
+          "path": "cosmopedia-v2/train-00007-of-00104.parquet",
+          "size": 1177633443,
+          "sha256": "9d7683d3a60852f143c7b7b37ddd76929756edcc7ad30286e9159a90efdca1c1",
+          "xet_hash": null,
+          "security_status": "safe",
+          "av_status": "safe",
+          "reviewed_allow_unscanned": false
+        },
+        {
+          "path": "cosmopedia-v2/train-00008-of-00104.parquet",
+          "size": 1175707518,
+          "sha256": "76beaad7c585ac2445c00a0cb011e158421a77e01b0a03ee771f0a3a76d63d74",
+          "xet_hash": null,
+          "security_status": "safe",
+          "av_status": "safe",
+          "reviewed_allow_unscanned": false
+        },
+        {
+          "path": "cosmopedia-v2/train-00009-of-00104.parquet",
+          "size": 1176050550,
+          "sha256": "335e72c1ae49e5ba255ceb70393498b85e523c85d2a46cced9d58155e6da13b6",
+          "xet_hash": null,
+          "security_status": "safe",
+          "av_status": "safe",
+          "reviewed_allow_unscanned": false
+        },
+        {
+          "path": "cosmopedia-v2/train-00010-of-00104.parquet",
+          "size": 1177441226,
+          "sha256": "a2121a7260a914ea6ba6b79f1c0c315ee00263e0b67aa8ed1183e758d8a5ad50",
+          "xet_hash": null,
+          "security_status": "safe",
+          "av_status": "safe",
+          "reviewed_allow_unscanned": false
+        },
+        {
+          "path": "cosmopedia-v2/train-00011-of-00104.parquet",
+          "size": 1175694672,
+          "sha256": "685c2d5da4ddbb8ce671afe0be211042dbd3cd478d8e545c96e654790643baeb",
+          "xet_hash": null,
+          "security_status": "safe",
+          "av_status": "safe",
+          "reviewed_allow_unscanned": false
+        },
+        {
+          "path": "cosmopedia-v2/train-00012-of-00104.parquet",
+          "size": 1176233384,
+          "sha256": "54e801580cd75fa77567a26ec7a72227361f3f40efcee59b33df6875de5ec605",
+          "xet_hash": null,
+          "security_status": "safe",
+          "av_status": "safe",
+          "reviewed_allow_unscanned": false
+        },
+        {
+          "path": "cosmopedia-v2/train-00013-of-00104.parquet",
+          "size": 1177328908,
+          "sha256": "d03d136bb851de8ce3ee08ebf8822d84e24370d4ed5c81a18b32fbd4b002f41b",
+          "xet_hash": null,
+          "security_status": "safe",
+          "av_status": "safe",
+          "reviewed_allow_unscanned": false
+        },
+        {
+          "path": "cosmopedia-v2/train-00014-of-00104.parquet",
+          "size": 1176822899,
+          "sha256": "8b6864512af1c26510dd360191b8531d354b49cccd06100d4ecda99cc80d081c",
+          "xet_hash": null,
+          "security_status": "safe",
+          "av_status": "safe",
+          "reviewed_allow_unscanned": false
+        },
+        {
+          "path": "cosmopedia-v2/train-00015-of-00104.parquet",
+          "size": 1177227322,
+          "sha256": "97c216426287121c37164756cfc93562d229ade65f984f70b5cdcdafe83e8355",
+          "xet_hash": null,
+          "security_status": "safe",
+          "av_status": "safe",
+          "reviewed_allow_unscanned": false
+        },
+        {
+          "path": "cosmopedia-v2/train-00016-of-00104.parquet",
+          "size": 1174685394,
+          "sha256": "2b0c17d994e432673d811cf00fc28a8cda43733533286150309e5faba7c44276",
+          "xet_hash": null,
+          "security_status": "safe",
+          "av_status": "safe",
+          "reviewed_allow_unscanned": false
+        },
+        {
+          "path": "cosmopedia-v2/train-00017-of-00104.parquet",
+          "size": 1177445389,
+          "sha256": "4a1ce3e706011a4c900f829154b4049839d683cef89c8d7dc39a9e41f029f65c",
+          "xet_hash": null,
+          "security_status": "safe",
+          "av_status": "safe",
+          "reviewed_allow_unscanned": false
+        },
+        {
+          "path": "cosmopedia-v2/train-00018-of-00104.parquet",
+          "size": 1177532742,
+          "sha256": "09b2e3f7a5a90612bfeda8e69b047ed9bb4811efa502b1d43740c6dd830b5c07",
+          "xet_hash": null,
+          "security_status": "safe",
+          "av_status": "safe",
+          "reviewed_allow_unscanned": false
+        },
+        {
+          "path": "cosmopedia-v2/train-00019-of-00104.parquet",
+          "size": 1175433217,
+          "sha256": "e3f50d1c325ccdc20df7d3a7fa0c714bd162c2dd2020cf98e404ef0553c0a736",
+          "xet_hash": null,
+          "security_status": "safe",
+          "av_status": "safe",
+          "reviewed_allow_unscanned": false
+        },
+        {
+          "path": "cosmopedia-v2/train-00020-of-00104.parquet",
+          "size": 1177571152,
+          "sha256": "a2d7506a82aed771f436b4e478e6a1c68106502849a188ec49e183a37213c2f0",
+          "xet_hash": null,
+          "security_status": "safe",
+          "av_status": "safe",
+          "reviewed_allow_unscanned": false
+        },
+        {
+          "path": "cosmopedia-v2/train-00021-of-00104.parquet",
+          "size": 1175644487,
+          "sha256": "3cfd8ce47462c5ea1a16d5f999fffeb94626e4782e41aca17fb6fbcbf6467bd7",
+          "xet_hash": null,
+          "security_status": "safe",
+          "av_status": "safe",
+          "reviewed_allow_unscanned": false
+        },
+        {
+          "path": "cosmopedia-v2/train-00022-of-00104.parquet",
+          "size": 1175277891,
+          "sha256": "744015e5374e954b221f8ff0d99471c624544313b12e582f223b4934c2d248bd",
+          "xet_hash": null,
+          "security_status": "safe",
+          "av_status": "safe",
+          "reviewed_allow_unscanned": false
+        },
+        {
+          "path": "cosmopedia-v2/train-00023-of-00104.parquet",
+          "size": 1178240074,
+          "sha256": "e0f47df3a7cada2d2dcebfbc8b556edc1faec138f04d697040a592d299028b81",
+          "xet_hash": null,
+          "security_status": "safe",
+          "av_status": "safe",
+          "reviewed_allow_unscanned": false
+        },
+        {
+          "path": "cosmopedia-v2/train-00024-of-00104.parquet",
+          "size": 1175216602,
+          "sha256": "b2f2fea3acdd832f11689550681237a18a1d02d5228a244b7b2f064d53c867dc",
+          "xet_hash": null,
+          "security_status": "safe",
+          "av_status": "safe",
+          "reviewed_allow_unscanned": false
+        },
+        {
+          "path": "cosmopedia-v2/train-00025-of-00104.parquet",
+          "size": 1177132871,
+          "sha256": "f8346628272980ecf2b8fb069296aaa487d46cdb3a1c21b28f2e37b2b0c95120",
+          "xet_hash": null,
+          "security_status": "safe",
+          "av_status": "safe",
+          "reviewed_allow_unscanned": false
+        },
+        {
+          "path": "cosmopedia-v2/train-00026-of-00104.parquet",
+          "size": 1177939332,
+          "sha256": "efee1d27bf167ea3fcca64fe335ef531b1f4a9f97abcb46e0a46ae1f3c508407",
+          "xet_hash": null,
+          "security_status": "safe",
+          "av_status": "safe",
+          "reviewed_allow_unscanned": false
+        },
+        {
+          "path": "cosmopedia-v2/train-00027-of-00104.parquet",
+          "size": 1176468135,
+          "sha256": "813cbf7ec1283c61b311b69c82a4e4ef012facf8a76ee139a92a8a097e8b51b2",
+          "xet_hash": null,
+          "security_status": "safe",
+          "av_status": "safe",
+          "reviewed_allow_unscanned": false
+        },
+        {
+          "path": "cosmopedia-v2/train-00028-of-00104.parquet",
+          "size": 1177381687,
+          "sha256": "d9439beaed1e5e1c6a66d7600efedcc26cbbc50831a8ac1b1d2f3e885f070b4b",
+          "xet_hash": null,
+          "security_status": "safe",
+          "av_status": "safe",
+          "reviewed_allow_unscanned": false
+        },
+        {
+          "path": "cosmopedia-v2/train-00029-of-00104.parquet",
+          "size": 1174864009,
+          "sha256": "a63ae2cf340e83564f3050561cf505b1f27e0ea2ea7400706fd73a1b8eec3489",
+          "xet_hash": null,
+          "security_status": "safe",
+          "av_status": "safe",
+          "reviewed_allow_unscanned": false
+        },
+        {
+          "path": "cosmopedia-v2/train-00030-of-00104.parquet",
+          "size": 1176491589,
+          "sha256": "53d0b6755d1164bd48e6bcb2195e0cb47fbaf09b383e6fb4932df6ac13359d0b",
+          "xet_hash": null,
+          "security_status": "safe",
+          "av_status": "safe",
+          "reviewed_allow_unscanned": false
+        },
+        {
+          "path": "cosmopedia-v2/train-00031-of-00104.parquet",
+          "size": 1176200164,
+          "sha256": "53d027d0aecc9a896b2d201608fa675d36b84844c5f4b4459b876e9397fdd76b",
+          "xet_hash": null,
+          "security_status": "safe",
+          "av_status": "safe",
+          "reviewed_allow_unscanned": false
+        },
+        {
+          "path": "cosmopedia-v2/train-00032-of-00104.parquet",
+          "size": 1175870456,
+          "sha256": "2d0b2cce00e7e1d4845d4997c507cad3df1fab7c5a38913052da1e5afade9709",
+          "xet_hash": null,
+          "security_status": "safe",
+          "av_status": "safe",
+          "reviewed_allow_unscanned": false
+        },
+        {
+          "path": "cosmopedia-v2/train-00033-of-00104.parquet",
+          "size": 1177666287,
+          "sha256": "b571880416a5385a4b33d036b5e013a60265a450682f52519c547279cdd8b872",
+          "xet_hash": null,
+          "security_status": "safe",
+          "av_status": "safe",
+          "reviewed_allow_unscanned": false
+        },
+        {
+          "path": "cosmopedia-v2/train-00034-of-00104.parquet",
+          "size": 1175159100,
+          "sha256": "f592e2be64396ee86cb7a2b7505d8ea68ac8f00eea82f623750f4ec6fa0e246e",
+          "xet_hash": null,
+          "security_status": "safe",
+          "av_status": "safe",
+          "reviewed_allow_unscanned": false
+        },
+        {
+          "path": "cosmopedia-v2/train-00035-of-00104.parquet",
+          "size": 1175618490,
+          "sha256": "dc368024be9892642e473388cf1dea5e3989676e60cdb435194a7e39f4c389b6",
+          "xet_hash": null,
+          "security_status": "safe",
+          "av_status": "safe",
+          "reviewed_allow_unscanned": false
+        },
+        {
+          "path": "cosmopedia-v2/train-00036-of-00104.parquet",
+          "size": 1177786572,
+          "sha256": "bd6a5e66892a2184b081d5f09547035910f3672880f3252d001a32af3683b3b7",
+          "xet_hash": null,
+          "security_status": "safe",
+          "av_status": "safe",
+          "reviewed_allow_unscanned": false
+        },
+        {
+          "path": "cosmopedia-v2/train-00037-of-00104.parquet",
+          "size": 1176413760,
+          "sha256": "f5ae428775eba8526dc0e0875e1e152ec9889ca587d601d34b7cf8a38099f4ec",
+          "xet_hash": null,
+          "security_status": "safe",
+          "av_status": "safe",
+          "reviewed_allow_unscanned": false
+        },
+        {
+          "path": "cosmopedia-v2/train-00038-of-00104.parquet",
+          "size": 1177275655,
+          "sha256": "12edd356ada9c952b670f1358bef21dd0ce9c2924cf688915fb000c574194fc3",
+          "xet_hash": null,
+          "security_status": "safe",
+          "av_status": "safe",
+          "reviewed_allow_unscanned": false
+        },
+        {
+          "path": "cosmopedia-v2/train-00039-of-00104.parquet",
+          "size": 1177961087,
+          "sha256": "433893850217fc8988f995722a2b0b9930aae9b5b8cf092be8f4b5255a6579e0",
+          "xet_hash": null,
+          "security_status": "safe",
+          "av_status": "safe",
+          "reviewed_allow_unscanned": false
+        },
+        {
+          "path": "cosmopedia-v2/train-00040-of-00104.parquet",
+          "size": 1176559290,
+          "sha256": "890ac6eb4155189e6c2b95affc0cb1e5db261848fc89c284dafba102cedf1bba",
+          "xet_hash": null,
+          "security_status": "safe",
+          "av_status": "safe",
+          "reviewed_allow_unscanned": false
+        },
+        {
+          "path": "cosmopedia-v2/train-00041-of-00104.parquet",
+          "size": 1178127898,
+          "sha256": "b9c2eaac20c64d641e9e87b59fda6eca987cf50f294dfd92516e67174c62ae16",
+          "xet_hash": null,
+          "security_status": "safe",
+          "av_status": "safe",
+          "reviewed_allow_unscanned": false
+        },
+        {
+          "path": "cosmopedia-v2/train-00042-of-00104.parquet",
+          "size": 1175785060,
+          "sha256": "54cebcd5035e892a032d45b2f78f4cd897bc2eb1c5ad98a1cf5ce707b16590e8",
+          "xet_hash": null,
+          "security_status": "safe",
+          "av_status": "safe",
+          "reviewed_allow_unscanned": false
+        },
+        {
+          "path": "cosmopedia-v2/train-00043-of-00104.parquet",
+          "size": 1176476896,
+          "sha256": "b962b145f1d040a36e86322055fb2e1e2a71b6d05a48817190659782d9dd8ae2",
+          "xet_hash": null,
+          "security_status": "safe",
+          "av_status": "safe",
+          "reviewed_allow_unscanned": false
+        },
+        {
+          "path": "cosmopedia-v2/train-00044-of-00104.parquet",
+          "size": 1176607232,
+          "sha256": "9a010690923fcd1eb4ee57715568d079ffc4e9eb59b5754dbaaefc6d67ca5f77",
+          "xet_hash": null,
+          "security_status": "safe",
+          "av_status": "safe",
+          "reviewed_allow_unscanned": false
+        },
+        {
+          "path": "cosmopedia-v2/train-00045-of-00104.parquet",
+          "size": 1175315973,
+          "sha256": "83d582cf63d7de45dd74694ff05d0ceab4b5956844c1760f8bd3b0d056eacd67",
+          "xet_hash": null,
+          "security_status": "safe",
+          "av_status": "safe",
+          "reviewed_allow_unscanned": false
+        },
+        {
+          "path": "cosmopedia-v2/train-00046-of-00104.parquet",
+          "size": 1176685596,
+          "sha256": "9072f5e954d8cce842751b1ec511652321203a12380986e578e37b40d86173e3",
+          "xet_hash": null,
+          "security_status": "safe",
+          "av_status": "safe",
+          "reviewed_allow_unscanned": false
+        },
+        {
+          "path": "cosmopedia-v2/train-00047-of-00104.parquet",
+          "size": 1175664959,
+          "sha256": "c2d443ac8040a26e68a338b558deab09a0a6ec7c4a3fb4e948a55bea579b9f2b",
+          "xet_hash": null,
+          "security_status": "safe",
+          "av_status": "safe",
+          "reviewed_allow_unscanned": false
+        },
+        {
+          "path": "cosmopedia-v2/train-00048-of-00104.parquet",
+          "size": 1176394240,
+          "sha256": "c5468c749c247ac2030ce2cbdc7f03b9e166e70c6f9e0b637e1fe91f78b51862",
+          "xet_hash": null,
+          "security_status": "safe",
+          "av_status": "safe",
+          "reviewed_allow_unscanned": false
+        },
+        {
+          "path": "cosmopedia-v2/train-00049-of-00104.parquet",
+          "size": 1177287095,
+          "sha256": "c83c1d44ff284c3f62cf8a8c5cdf52d7883ca4d1b9d15a83d3b1a9930e2c9f6c",
+          "xet_hash": null,
+          "security_status": "safe",
+          "av_status": "safe",
+          "reviewed_allow_unscanned": false
+        },
+        {
+          "path": "cosmopedia-v2/train-00100-of-00104.parquet",
+          "size": 1175387834,
+          "sha256": "ef00f8903374596eb649ab2f0e44dc780ba45cff0369982b483e9ad4e4480729",
+          "xet_hash": null,
+          "security_status": "safe",
+          "av_status": "safe",
+          "reviewed_allow_unscanned": false
+        },
+        {
+          "path": "cosmopedia-v2/train-00101-of-00104.parquet",
+          "size": 1178770635,
+          "sha256": "e30de72359d3c9a9b0495ec39a396d1768d1f9b5071f2e2edbb57ad3d303407c",
+          "xet_hash": null,
+          "security_status": "safe",
+          "av_status": "safe",
+          "reviewed_allow_unscanned": false
+        },
+        {
+          "path": "cosmopedia-v2/train-00102-of-00104.parquet",
+          "size": 1176765108,
+          "sha256": "6493d76632745f86c8407593bb07724f88422a3aeace3599758f8e6fd80341f1",
+          "xet_hash": null,
+          "security_status": "safe",
+          "av_status": "safe",
+          "reviewed_allow_unscanned": false
+        },
+        {
+          "path": "cosmopedia-v2/train-00103-of-00104.parquet",
+          "size": 1176609391,
+          "sha256": "6f8325cce286fc90aa937c698d19be3c2468a58778ba4a9eaa3b7f5e2a8e3f64",
+          "xet_hash": null,
+          "security_status": "safe",
+          "av_status": "safe",
+          "reviewed_allow_unscanned": false
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+# Throughput-sweep notes. The command is `arzlm bench`, not this YAML.
+model_config: model-arzlm-100m.yaml
+data_dir: data/prepared/tiny
+precision: bf16-true
+compile: false
+seq_length: 1024
+warmup_steps: 5
+measure_steps: 10
+microbatches: [1, 2, 4, 8]

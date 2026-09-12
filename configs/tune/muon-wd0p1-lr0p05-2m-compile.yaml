@@ -1,0 +1,47 @@
+# Weight-decay sanity at the compile-10M winning LR (0.05). Control WD=0.10.
+name: tune-muon-wd0p1-lr0p05-2m-compile
+model_config: ../model-arzlm-100m.yaml
+out_dir: runs/tune/muon-wd0p1-lr0p05-2m-compile
+data_dir: data/prepared/10m
+tokenizer_dir: tokenizer/trained
+precision: bf16-true
+compile: true
+seed: 42
+devices: 1
+logger_name: csv
+resume: false
+num_workers: 0
+
+train:
+  save_interval: 100000
+  log_interval: 10
+  global_batch_size: 8
+  micro_batch_size: 4
+  lr_warmup_steps: 50
+  max_tokens: 2000000
+  max_seq_length: 1024
+  tie_embeddings: true
+  max_norm: 1.0
+  min_lr: 6.0e-5
+
+eval:
+  interval: 50
+  max_iters: 8
+  initial_validation: false
+  final_validation: true
+
+optimizer:
+  name: muon_hybrid
+  class_path: arzlm.training.optim.muon.SingleDeviceMuonWithAuxAdam
+  muon:
+    lr: 0.05
+    momentum: 0.95
+    weight_decay: 0.1
+    nesterov: true
+    ns_steps: 5
+    scale: jordan
+  adamw:
+    lr: 6.0e-4
+    weight_decay: 0.1
+    betas: [0.9, 0.95]
+    eps: 1.0e-8

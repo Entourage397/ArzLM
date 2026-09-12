@@ -1,0 +1,11 @@
+{
+  "git_commit": "e19a2bb7026dcc99f5151e021c168fd923cd1b65",
+  "first_steps": 4,
+  "resume_steps": 6,
+  "first_finite": true,
+  "resume_finite": true,
+  "first_loss": 6.260168075561523,
+  "resume_loss": 4.084722995758057,
+  "compile_active": true,
+  "ok": true
+}

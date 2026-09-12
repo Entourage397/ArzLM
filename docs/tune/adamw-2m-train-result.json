@@ -1,0 +1,109 @@
+{
+  "environment": {
+    "python": "3.12.14",
+    "platform": "win32",
+    "pytorch": "2.11.0+cu128",
+    "cuda_runtime": "12.8",
+    "cuda_available": true,
+    "bf16_supported": true,
+    "triton": false,
+    "triton_version": null,
+    "sdpa": {
+      "flash_sdp": true,
+      "mem_efficient_sdp": true,
+      "math_sdp": true,
+      "cudnn_sdp": true,
+      "sdp_backends": []
+    },
+    "preferred_sdpa": "flash",
+    "compile_notes": {
+      "platform": "win32",
+      "triton_available": false,
+      "triton_version": null,
+      "recommendation": "Use WSL2 + Linux PyTorch for reliable torch.compile/Inductor if Windows compile fails (Triton is not installed on this host)."
+    },
+    "nvidia_driver": "616.64",
+    "nvidia_cuda_version": null,
+    "gpu_name": "NVIDIA GeForce RTX 4070 Laptop GPU",
+    "gpu_capability": [
+      8,
+      9
+    ],
+    "gpu_total_memory_bytes": 8585216000,
+    "cuda_version": "12.8",
+    "litgpt": "0.5.13",
+    "lightning": "2.6.5"
+  },
+  "parameters": {
+    "trainable": 100094208,
+    "total": 100094208,
+    "formula": 100094208,
+    "target": 100000000
+  },
+  "compile_active": false,
+  "compile_error": null,
+  "loss": 6.387252330780029,
+  "best_train_loss": 5.897017955780029,
+  "val_loss": 6.449515342712402,
+  "val_ppl": 632.3957233317295,
+  "steps": 244,
+  "iters": 976,
+  "tokens": 1998848,
+  "elapsed_s": 107.86069429997588,
+  "tokens_per_sec": 18531.755362531974,
+  "finite": true,
+  "out_dir": "C:\\Users\\ASUS\\ArzLM\\runs\\tune\\adamw-2m",
+  "sdpa": "flash",
+  "precision": "bf16-true",
+  "micro_batch_size": 2,
+  "global_batch_size": 8,
+  "gradient_accumulation": 4,
+  "seq_length": 1024,
+  "seed": 42,
+  "git_commit": "1658ba2303ad9173cd60c2b9d18d2efb0b076a42",
+  "git_describe": "baseline-v0-1-g1658ba2-dirty",
+  "optimizer": {
+    "kind": "adamw",
+    "class": "AdamW",
+    "spec": {
+      "name": "adamw",
+      "class_path": "torch.optim.AdamW",
+      "init_args": {
+        "lr": 0.0006,
+        "weight_decay": 0.1,
+        "betas": [
+          0.9,
+          0.95
+        ],
+        "eps": 1e-08,
+        "fused": true
+      }
+    },
+    "param_groups": [
+      {
+        "lr": 0.0006,
+        "betas": [
+          0.9,
+          0.95
+        ],
+        "eps": 1e-08,
+        "weight_decay": 0.1,
+        "amsgrad": false,
+        "maximize": false,
+        "foreach": null,
+        "capturable": false,
+        "differentiable": false,
+        "fused": true,
+        "decoupled_weight_decay": true,
+        "initial_lr": 0.0006,
+        "n_params": 100094208,
+        "n_tensors": 110
+      }
+    ]
+  },
+  "lr_schedule": "linear_warmup_cosine",
+  "flop_estimate_6nd": 1200438644834304,
+  "metrics_path": "C:\\Users\\ASUS\\ArzLM\\runs\\tune\\adamw-2m\\metrics.jsonl",
+  "peak_allocated_vram_bytes": 2803841536,
+  "peak_reserved_vram_bytes": 3021996032
+}

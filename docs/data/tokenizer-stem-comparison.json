@@ -1,0 +1,353 @@
+{
+  "target_vocab": 32000,
+  "current": {
+    "tokenizer_dir": "/home/asus/arzlm/tokenizer/trained",
+    "tokenizer_sha256": "3132f2ffe4b8046661ffed8ffce19dc82ec5acbe90b469db8ef12639638e5ed8",
+    "vocab_size": 32000,
+    "target_vocab": 32000,
+    "encode_ns_probe": 9243.63499990477,
+    "decode_ns_probe": 1356.6550001087307,
+    "unicode_roundtrip": true,
+    "utf8_roundtrip": true,
+    "math_fragmentation": {
+      "\\frac{a}{b}": 9,
+      "\\sum_{i=1}^{n} i^2": 16,
+      "\\int_0^1 \\sqrt{x}\\,dx": 18,
+      "\\begin{align} x &= 1 \\end{align}": 17,
+      "$\\nabla \\cdot \\mathbf{B} = 0$": 18,
+      "E = mc^2": 6,
+      "\\mathbb{R}^{n}": 11,
+      "1234567890": 6
+    },
+    "code_fragmentation": {
+      "    def foo(x):\n        return x + 1\n": 22,
+      "for (int i = 0; i < n; ++i) {\n  s += a[i];\n}\n": 30,
+      "SELECT id FROM users WHERE x = 1;\n": 15,
+      "fn main() {\n    println!(\"hi\");\n}\n": 22,
+      "== != <= >= && ||": 11
+    },
+    "domains": {
+      "general": {
+        "chars": 82562,
+        "bytes": 82795,
+        "tokens": 17366,
+        "chars_per_token": 4.754232408153864,
+        "bytes_per_token": 4.767649429920534,
+        "tokens_per_byte": 0.20974696539646115,
+        "roundtrip": true
+      },
+      "math": {
+        "chars": 82541,
+        "bytes": 82938,
+        "tokens": 23462,
+        "chars_per_token": 3.5180717756372006,
+        "bytes_per_token": 3.5349927542409003,
+        "tokens_per_byte": 0.2828860112373098,
+        "roundtrip": true
+      },
+      "code": {
+        "chars": 80505,
+        "bytes": 81877,
+        "tokens": 41372,
+        "chars_per_token": 1.9458812723581167,
+        "bytes_per_token": 1.9790437977376003,
+        "tokens_per_byte": 0.5052945271565885,
+        "roundtrip": false
+      },
+      "science": {
+        "chars": 108673,
+        "bytes": 108865,
+        "tokens": 25810,
+        "chars_per_token": 4.210499806276637,
+        "bytes_per_token": 4.21793878341728,
+        "tokens_per_byte": 0.2370826252698296,
+        "roundtrip": true
+      }
+    }
+  },
+  "candidates": [
+    {
+      "train_chars_target": 400000,
+      "dir": "tokenizer/stem-v1-400000",
+      "report": {
+        "tokenizer_dir": "/home/asus/arzlm/tokenizer/stem-v1-400000",
+        "tokenizer_sha256": "6c5422330c77d5630c425ee1a28e2a5376c0b7924ac240ff0aecaf6881999d72",
+        "vocab_size": 19506,
+        "target_vocab": 32000,
+        "encode_ns_probe": 7028.864999938378,
+        "decode_ns_probe": 1620.0350000872277,
+        "unicode_roundtrip": true,
+        "utf8_roundtrip": true,
+        "math_fragmentation": {
+          "\\frac{a}{b}": 7,
+          "\\sum_{i=1}^{n} i^2": 13,
+          "\\int_0^1 \\sqrt{x}\\,dx": 13,
+          "\\begin{align} x &= 1 \\end{align}": 13,
+          "$\\nabla \\cdot \\mathbf{B} = 0$": 16,
+          "E = mc^2": 6,
+          "\\mathbb{R}^{n}": 8,
+          "1234567890": 5
+        },
+        "code_fragmentation": {
+          "    def foo(x):\n        return x + 1\n": 13,
+          "for (int i = 0; i < n; ++i) {\n  s += a[i];\n}\n": 27,
+          "SELECT id FROM users WHERE x = 1;\n": 16,
+          "fn main() {\n    println!(\"hi\");\n}\n": 17,
+          "== != <= >= && ||": 8
+        },
+        "domains": {
+          "general": {
+            "chars": 82562,
+            "bytes": 82795,
+            "tokens": 20397,
+            "chars_per_token": 4.047752120409864,
+            "bytes_per_token": 4.059175368926803,
+            "tokens_per_byte": 0.24635545624735794,
+            "roundtrip": true
+          },
+          "math": {
+            "chars": 82541,
+            "bytes": 82938,
+            "tokens": 23847,
+            "chars_per_token": 3.4612739547951525,
+            "bytes_per_token": 3.4779217511636684,
+            "tokens_per_byte": 0.28752803298849744,
+            "roundtrip": true
+          },
+          "code": {
+            "chars": 80505,
+            "bytes": 81877,
+            "tokens": 27776,
+            "chars_per_token": 2.898365495391705,
+            "bytes_per_token": 2.9477606566820276,
+            "tokens_per_byte": 0.3392405681693272,
+            "roundtrip": false
+          },
+          "science": {
+            "chars": 108673,
+            "bytes": 108865,
+            "tokens": 28748,
+            "chars_per_token": 3.780193404758592,
+            "bytes_per_token": 3.786872130235147,
+            "tokens_per_byte": 0.26407017866164517,
+            "roundtrip": true
+          }
+        }
+      },
+      "weighted_chars_per_token": 3.7312926219690707
+    },
+    {
+      "train_chars_target": 2000000,
+      "dir": "tokenizer/stem-v1-2000000",
+      "report": {
+        "tokenizer_dir": "/home/asus/arzlm/tokenizer/stem-v1-2000000",
+        "tokenizer_sha256": "332f916a41684ef23b059fb12b79b71f6acb2b355a2af52c46bd3ec808c6f800",
+        "vocab_size": 32000,
+        "target_vocab": 32000,
+        "encode_ns_probe": 7816.039999966051,
+        "decode_ns_probe": 1164.024999980029,
+        "unicode_roundtrip": true,
+        "utf8_roundtrip": true,
+        "math_fragmentation": {
+          "\\frac{a}{b}": 7,
+          "\\sum_{i=1}^{n} i^2": 12,
+          "\\int_0^1 \\sqrt{x}\\,dx": 13,
+          "\\begin{align} x &= 1 \\end{align}": 13,
+          "$\\nabla \\cdot \\mathbf{B} = 0$": 13,
+          "E = mc^2": 6,
+          "\\mathbb{R}^{n}": 7,
+          "1234567890": 4
+        },
+        "code_fragmentation": {
+          "    def foo(x):\n        return x + 1\n": 13,
+          "for (int i = 0; i < n; ++i) {\n  s += a[i];\n}\n": 26,
+          "SELECT id FROM users WHERE x = 1;\n": 14,
+          "fn main() {\n    println!(\"hi\");\n}\n": 14,
+          "== != <= >= && ||": 6
+        },
+        "domains": {
+          "general": {
+            "chars": 82562,
+            "bytes": 82795,
+            "tokens": 18791,
+            "chars_per_token": 4.393699111276675,
+            "bytes_per_token": 4.406098664254165,
+            "tokens_per_byte": 0.2269581496467178,
+            "roundtrip": true
+          },
+          "math": {
+            "chars": 82541,
+            "bytes": 82938,
+            "tokens": 21869,
+            "chars_per_token": 3.774338104165714,
+            "bytes_per_token": 3.7924916548539027,
+            "tokens_per_byte": 0.2636788926668113,
+            "roundtrip": true
+          },
+          "code": {
+            "chars": 80505,
+            "bytes": 81877,
+            "tokens": 24858,
+            "chars_per_token": 3.2385952208544535,
+            "bytes_per_token": 3.2937887199291978,
+            "tokens_per_byte": 0.30360174407953394,
+            "roundtrip": true
+          },
+          "science": {
+            "chars": 108673,
+            "bytes": 108865,
+            "tokens": 26000,
+            "chars_per_token": 4.179730769230769,
+            "bytes_per_token": 4.187115384615384,
+            "tokens_per_byte": 0.2388279061222615,
+            "roundtrip": true
+          }
+        }
+      },
+      "weighted_chars_per_token": 4.075164492086559
+    },
+    {
+      "train_chars_target": 8000000,
+      "dir": "tokenizer/stem-v1",
+      "report": {
+        "tokenizer_dir": "/home/asus/arzlm/tokenizer/stem-v1",
+        "tokenizer_sha256": "a87cd2eecd8c7e5923b5a983630e2afdeb9e78df078a4af83c54c77f903f06cf",
+        "vocab_size": 32000,
+        "target_vocab": 32000,
+        "encode_ns_probe": 8400.729999777923,
+        "decode_ns_probe": 1331.035000191605,
+        "unicode_roundtrip": true,
+        "utf8_roundtrip": true,
+        "math_fragmentation": {
+          "\\frac{a}{b}": 7,
+          "\\sum_{i=1}^{n} i^2": 12,
+          "\\int_0^1 \\sqrt{x}\\,dx": 12,
+          "\\begin{align} x &= 1 \\end{align}": 13,
+          "$\\nabla \\cdot \\mathbf{B} = 0$": 12,
+          "E = mc^2": 6,
+          "\\mathbb{R}^{n}": 7,
+          "1234567890": 5
+        },
+        "code_fragmentation": {
+          "    def foo(x):\n        return x + 1\n": 13,
+          "for (int i = 0; i < n; ++i) {\n  s += a[i];\n}\n": 26,
+          "SELECT id FROM users WHERE x = 1;\n": 13,
+          "fn main() {\n    println!(\"hi\");\n}\n": 14,
+          "== != <= >= && ||": 6
+        },
+        "domains": {
+          "general": {
+            "chars": 82562,
+            "bytes": 82795,
+            "tokens": 18176,
+            "chars_per_token": 4.542363556338028,
+            "bytes_per_token": 4.555182658450704,
+            "tokens_per_byte": 0.21953016486502808,
+            "roundtrip": true
+          },
+          "math": {
+            "chars": 82541,
+            "bytes": 82938,
+            "tokens": 21385,
+            "chars_per_token": 3.859761515080664,
+            "bytes_per_token": 3.878325929389759,
+            "tokens_per_byte": 0.25784320817960404,
+            "roundtrip": true
+          },
+          "code": {
+            "chars": 80505,
+            "bytes": 81877,
+            "tokens": 24587,
+            "chars_per_token": 3.2742912921462564,
+            "bytes_per_token": 3.3300931386505064,
+            "tokens_per_byte": 0.30029190126653393,
+            "roundtrip": true
+          },
+          "science": {
+            "chars": 108673,
+            "bytes": 108865,
+            "tokens": 25170,
+            "chars_per_token": 4.317560588001589,
+            "bytes_per_token": 4.325188716726261,
+            "tokens_per_byte": 0.23120378450374318,
+            "roundtrip": true
+          }
+        }
+      },
+      "weighted_chars_per_token": 4.193152011624146
+    }
+  ],
+  "held_chars_per_domain": {
+    "general": 82562,
+    "math": 82541,
+    "code": 80505,
+    "science": 108673
+  },
+  "train_chars_per_domain": {
+    "general": 4447005,
+    "math": 1603145,
+    "code": 1205993,
+    "science": 833356
+  },
+  "sample_meta": {
+    "held": {
+      "general": {
+        "chars": 82518,
+        "docs": 23
+      },
+      "math": {
+        "chars": 82499,
+        "docs": 22
+      },
+      "code": {
+        "chars": 80475,
+        "docs": 16
+      },
+      "science": {
+        "chars": 108669,
+        "docs": 3
+      }
+    },
+    "train": {
+      "general": {
+        "chars": 4445175,
+        "docs": 916
+      },
+      "math": {
+        "chars": 1602515,
+        "docs": 316
+      },
+      "code": {
+        "chars": 1205413,
+        "docs": 291
+      },
+      "science": {
+        "chars": 833306,
+        "docs": 26
+      }
+    },
+    "code_network": {
+      "bytes": 378898,
+      "requests": 308
+    },
+    "science_network": {
+      "bytes": 393240,
+      "requests": 0
+    }
+  },
+  "code_train_languages": [
+    "Python",
+    "C",
+    "Cpp",
+    "Java",
+    "JavaScript",
+    "SQL"
+  ],
+  "current_weighted_chars_per_token": 4.031374351093446,
+  "candidate_weighted_chars_per_token": 4.193152011624146,
+  "decision": {
+    "keep_current": false,
+    "reason": "select_stem_tokenizer",
+    "selected_dir": "tokenizer/stem-v1"
+  }
+}

@@ -1,0 +1,71 @@
+# ArzLM-100M base pretraining: 2 local epochs over the 1,000,005,632 unique
+# token STEM corpus (2,000,011,264 exposures, 244,142 optimizer steps at 8192
+# tokens/step). Random init, seed 42. Do not start from the historical 50M run.
+#
+# Scheduler is the validated 50M recipe scaled by token budget:
+#   50M used 100 warmup steps (~1.64% of 6,104 steps)
+#   2B uses 4000 warmup steps (~1.64% of 244,142 steps)
+#   cosine to min_lr 6e-5
+name: arzlm-100m-final-2b
+model_config: model-arzlm-100m.yaml
+out_dir: runs/arzlm-100m-base-2b
+data_dir: data/prepared/arzlm-stem-1b-v1
+tokenizer_dir: tokenizer/arzlm-stem-32k-v1
+precision: bf16-true
+compile: true
+seed: 42
+devices: 1
+logger_name: tensorboard
+resume: auto
+num_workers: 0
+
+mixture:
+  general: 0.55
+  math: 0.20
+  code: 0.15
+  science: 0.10
+
+checkpoint:
+  keep_full: 3
+  milestones_tokens:
+    - 250000000
+    - 500000000
+    - 1000000000
+    - 1500000000
+    - 2000000000
+
+train:
+  # 50,003,712 tokens between full checkpoints (6104 steps * 8192)
+  save_interval: 6104
+  log_interval: 10
+  global_batch_size: 8
+  micro_batch_size: 4
+  lr_warmup_steps: 4000
+  max_tokens: 2000011264
+  max_seq_length: 1024
+  tie_embeddings: true
+  max_norm: 1.0
+  min_lr: 6.0e-5
+
+eval:
+  # ~99,999,744 tokens between domain vals (12207 steps * 8192)
+  interval: 12207
+  max_iters: 8
+  initial_validation: false
+  final_validation: true
+
+optimizer:
+  name: muon_hybrid
+  class_path: arzlm.training.optim.muon.SingleDeviceMuonWithAuxAdam
+  muon:
+    lr: 0.05
+    momentum: 0.95
+    weight_decay: 0.1
+    nesterov: true
+    ns_steps: 5
+    scale: jordan
+  adamw:
+    lr: 6.0e-4
+    weight_decay: 0.1
+    betas: [0.9, 0.95]
+    eps: 1.0e-8

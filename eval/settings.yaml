@@ -1,0 +1,44 @@
+# Canonical few-shot and generation settings. Identical for every model.
+# Do not change these per-model.
+seed: 1234
+max_length: 2048
+dtype: bfloat16
+batch_size: 1
+use_cache: false
+apply_chat_template: false
+
+fewshot:
+  hellaswag: 10
+  piqa: 0
+  winogrande: 5
+  arc_easy: 0
+  arc_challenge: 25
+  openbookqa: 0
+  boolq: 0
+  mmlu: 5
+  gsm8k: 5
+  lambada_openai: 0
+  wikitext: 0
+
+generation:
+  humaneval:
+    do_sample: false
+    temperature: 0.0
+    max_gen_toks: 512
+  mbpp:
+    do_sample: false
+    temperature: 0.0
+    max_gen_toks: 512
+  gsm8k:
+    do_sample: false
+    temperature: 0.0
+    until:
+      - "\n\n"
+      - "Q:"
+      - "Question:"
+
+performance:
+  prompt_tokens: 512
+  gen_tokens: 256
+  warmup: 2
+  repeats: 5

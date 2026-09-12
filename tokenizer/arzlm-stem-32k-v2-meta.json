@@ -1,0 +1,7 @@
+{
+  "dir": "/vol/data/tokenizer/arzlm-stem-32k-v2",
+  "vocab_size": 32000,
+  "eos_id": 2,
+  "sha256": "ad4f965de6e2e511c4ef44109a7cf4f57fa5af95b00ba211f6d2ab84a1d07e93",
+  "identity": "arzlm-stem-32k-v2"
+}

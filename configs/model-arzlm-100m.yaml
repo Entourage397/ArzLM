@@ -1,0 +1,44 @@
+# The name of the model. Must match a key we control, not a stock LitGPT name.
+name: ArzLM-100M
+hf_config:
+  org: ArzLM
+  name: ArzLM-100M
+
+# Context and size
+block_size: 1024
+n_layer: 12
+n_embd: 768
+vocab_size: 32000
+# 32000 is divisible by 64. LitGPT default padding_multiple=512 would expand
+# the embedding table to 32256 and add ~2M parameters.
+padding_multiple: 64
+
+# LLaMA-style block: sequential residual, RMSNorm, SwiGLU
+norm_class_name: RMSNorm
+norm_eps: 1.0e-5
+norm_qk: true
+norm_qk_type: default
+post_attention_norm: false
+post_mlp_norm: false
+parallel_residual: false
+shared_attention_norm: false
+norm_1: true
+norm_2: true
+
+# Attention: 12 query heads, GQA with 4 KV groups, head_dim=64
+n_head: 12
+head_size: 64
+n_query_groups: 4
+attn_bias: false
+
+# Full RoPE
+rotary_percentage: 1.0
+rope_base: 10000
+rope_condense_ratio: 1
+
+# SwiGLU MLP
+intermediate_size: 2048
+bias: false
+mlp_class_name: LLaMAMLP
+lm_head_bias: false
+scale_embeddings: false

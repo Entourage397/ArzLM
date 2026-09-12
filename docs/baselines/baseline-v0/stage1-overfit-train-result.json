@@ -1,0 +1,59 @@
+{
+  "environment": {
+    "python": "3.12.14",
+    "platform": "win32",
+    "pytorch": "2.11.0+cu128",
+    "cuda_runtime": "12.8",
+    "cuda_available": true,
+    "bf16_supported": true,
+    "triton": false,
+    "sdpa": {
+      "flash_sdp": true,
+      "mem_efficient_sdp": true,
+      "math_sdp": true,
+      "cudnn_sdp": true,
+      "sdp_backends": []
+    },
+    "preferred_sdpa": "flash",
+    "compile_notes": {
+      "platform": "win32",
+      "triton_available": false,
+      "recommendation": "Use WSL2 + Linux PyTorch for reliable torch.compile/Inductor if Windows compile fails (Triton is not installed on this host)."
+    },
+    "gpu_name": "NVIDIA GeForce RTX 4070 Laptop GPU",
+    "gpu_capability": [
+      8,
+      9
+    ],
+    "gpu_total_memory_bytes": 8585216000,
+    "cuda_version": "12.8",
+    "litgpt": "0.5.13",
+    "lightning": "2.6.5"
+  },
+  "parameters": {
+    "trainable": 100094208,
+    "total": 100094208,
+    "formula": 100094208,
+    "target": 100000000
+  },
+  "compile_active": false,
+  "compile_error": null,
+  "loss": 5.612704753875732,
+  "best_train_loss": 5.079817295074463,
+  "val_loss": 7.6300554275512695,
+  "steps": 122,
+  "iters": 488,
+  "tokens": 999424,
+  "elapsed_s": 57.29426379999495,
+  "tokens_per_sec": 17443.700882322675,
+  "finite": true,
+  "out_dir": "C:\\Users\\ASUS\\ArzLM\\runs\\stage1-overfit-1m",
+  "sdpa": "flash",
+  "precision": "bf16-true",
+  "micro_batch_size": 2,
+  "global_batch_size": 8,
+  "gradient_accumulation": 4,
+  "seq_length": 1024,
+  "peak_allocated_vram_bytes": 2803841536,
+  "peak_reserved_vram_bytes": 3021996032
+}

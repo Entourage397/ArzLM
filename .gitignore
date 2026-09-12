@@ -1,0 +1,37 @@
+.venv/
+.python-version
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.eggs/
+dist/
+build/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Local data, caches, and experiment artifacts
+data/prepared/
+data/raw/
+data/tokenizer-corpus/
+data/security/quarantine/
+runs/
+hf-cache/
+.cache/
+state/full-build/
+logs/full-build/
+artifacts/
+*.bin
+*.pt
+*.pth
+*.ckpt
+events.out.tfevents.*
+
+# Editors / OS
+.idea/
+.vscode/
+Thumbs.db
+.DS_Store

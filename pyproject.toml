@@ -1,0 +1,60 @@
+[build-system]
+requires = ["setuptools>=68.2.2", "wheel>=0.41.2"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "arzlm"
+version = "0.1.0"
+description = "ArzLM-300M-Base: a reproducible 303M decoder-only LM trained from scratch on 6.000B tokens."
+readme = "README.md"
+requires-python = ">=3.12,<3.13"
+license = { text = "Apache-2.0" }
+authors = [{ name = "ArzLM" }]
+dependencies = [
+    "litgpt>=0.5.13",
+    "lightning>=2.6.1",
+    "torch>=2.7",
+    "tokenizers>=0.21",
+    "datasets>=2.18,<4",
+    "huggingface-hub>=0.30",
+    "safetensors>=0.4.3",
+    "tensorboard>=2.14",
+    "pyyaml>=6.0",
+    "jsonargparse[signatures]>=4.37",
+    "tqdm>4.66",
+    "numpy>=1.26",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.1.1",
+]
+eval = [
+    "lm-eval==0.4.13",
+    "transformers>=4.51",
+]
+
+[project.scripts]
+arzlm = "arzlm.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = ["-ra", "--strict-markers"]
+markers = [
+    "gpu: tests that require CUDA",
+    "slow: longer integration tests",
+]
+
+[tool.uv]
+package = true
+
+[[tool.uv.index]]
+name = "pytorch-cu128"
+url = "https://download.pytorch.org/whl/cu128"
+explicit = true
+
+[tool.uv.sources]
+torch = { index = "pytorch-cu128" }

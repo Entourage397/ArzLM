@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "description": "Hard-denied upstream artifacts. These must never be fetched, even if Hub badges change.",
+  "entries": [
+    {
+      "dataset_id": "HuggingFaceFW/fineweb-edu",
+      "path": "data/CC-MAIN-2024-38/000_00041.parquet",
+      "sha256": "87753428a95294f19aac1f579d145c264ab55484d9fd205a413698821aaf1dc2",
+      "xet_hash": "029d8216b2dff2f861b43b281e39e080b87d27f09aedbe5936a8a45da5e22c31",
+      "revision": "87f09149ef4734204d70ed1d046ddc9ca3f2b8f9",
+      "size": 802227208,
+      "reason": "Hugging Face ClamAV Unsafe: detected 1 infection(s). Picklescan: not a pickle. Threat name not published. Observed 2026-09-08.",
+      "hub_page": "https://huggingface.co/datasets/HuggingFaceFW/fineweb-edu/blob/main/data/CC-MAIN-2024-38/000_00041.parquet"
+    }
+  ]
+}

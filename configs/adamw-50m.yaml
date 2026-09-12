@@ -1,0 +1,45 @@
+# 50M-token AdamW control. Matched to muon-50m.yaml except the optimizer.
+#
+# Platform: WSL2 Ubuntu, Linux filesystem ~/arzlm (not /mnt/c).
+# Fastest stable compile for AdamW: model torch.compile with CUDA graphs ON,
+# micro-batch 4, global batch 8, BF16, seq=1024, seed 42.
+# Packed data: `arzlm prepare --preset 50m`. Run only as the matched 50M control.
+name: adamw-50m
+model_config: model-arzlm-100m.yaml
+out_dir: runs/adamw-50m
+data_dir: data/prepared/50m
+tokenizer_dir: tokenizer/trained
+precision: bf16-true
+compile: true
+seed: 42
+devices: 1
+logger_name: tensorboard
+resume: auto
+num_workers: 0
+
+train:
+  save_interval: 200
+  log_interval: 10
+  global_batch_size: 8
+  micro_batch_size: 4
+  lr_warmup_steps: 100
+  max_tokens: 50000000
+  max_seq_length: 1024
+  tie_embeddings: true
+  max_norm: 1.0
+  min_lr: 6.0e-5
+
+eval:
+  interval: 200
+  max_iters: 16
+  initial_validation: false
+  final_validation: true
+
+optimizer:
+  name: adamw
+  class_path: torch.optim.AdamW
+  init_args:
+    lr: 6.0e-4
+    weight_decay: 0.1
+    betas: [0.9, 0.95]
+    eps: 1.0e-8

@@ -1,0 +1,40 @@
+{
+  "tag": "baseline-v0",
+  "files": [
+    {
+      "file": "model-arzlm-100m.yaml",
+      "sha256": "78aa6097b958a0d9bfe5888b2a53286dbb5afcbfd70948698e2c9afc8dc21a7b",
+      "bytes": 999
+    },
+    {
+      "file": "stage0-smoke-train-result.json",
+      "sha256": "c4d7eaaa94b4bff274cb510987a01d05b48ecd226e3204e5521ac5872b22c35e",
+      "bytes": 1631
+    },
+    {
+      "file": "stage1-overfit-train-result.json",
+      "sha256": "d1ec2757aa4f95697cbe7b94b62ea32c2aa9a59fdbbd2d8b6813b71781054b4c",
+      "bytes": 1642
+    },
+    {
+      "file": "stage2-model-config.yaml",
+      "sha256": "cfe4fa77ea2c267e0a4cf751c29f6116808bb8dd28d026993e9414a28df4f2da",
+      "bytes": 1173
+    },
+    {
+      "file": "stage2-train-result.json",
+      "sha256": "2140661c49cb9ca10371da23382b58d54972e2ab6e65c161c00ad20f882ebfa3",
+      "bytes": 1643
+    },
+    {
+      "file": "train-bench-10m.yaml",
+      "sha256": "c0224668b7e73bca23ec6b833bb64e531991c94302edc53189a6b838c741ef5a",
+      "bytes": 698
+    },
+    {
+      "file": "windows-benchmark.json",
+      "sha256": "1317722aa2d80694790b4556bb591573f141911e276f677067abaeb6995d59fd",
+      "bytes": 4959
+    }
+  ]
+}
